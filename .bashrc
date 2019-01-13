@@ -8,8 +8,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 alias c='clear'
 
 # -F displays `/`for directories, `*` for executables, etc...
-alias ls='ls -F --color=auto'
-alias ls.='ls -Fd .* --color=auto' # Show dotfiles and hide others
+alias ls='ls -F'
+alias ls.='ls -Fd .*' # Show dotfiles and hide others
 alias ~="cd ~"
 
 # For going up multiple directories
