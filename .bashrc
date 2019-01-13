@@ -10,7 +10,12 @@ alias c='clear'
 # -F displays `/`for directories, `*` for executables, etc...
 alias ls='ls -F'
 alias ls.='ls -Fd .*' # Show dotfiles and hide others
-alias ~="cd ~"
+alias ~="cd ~" # Make it easier to go to root
+
+# Git
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
 
 # For going up multiple directories
 alias cd..='cd ..' # For mistyping
