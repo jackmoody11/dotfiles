@@ -25,6 +25,9 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
+# Track CPU usage
+alias cpu="top -F -R -o cpu"
+
 
 
 # If you ever need to remove Last Login message
@@ -74,3 +77,7 @@ git_branch() {
 
 # Custom bash prompt - "➜  ~ (master) "
 export PS1="${titlebar}${green}➜  ${blue}\W ${cyan}\$(git_branch)${clear_attributes}"
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash ] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash
