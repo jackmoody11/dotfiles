@@ -28,6 +28,9 @@ alias .5='cd ../../../../..'
 # Track CPU usage
 alias cpu="top -F -R -o cpu"
 
+# Open applications
+alias google="open -a 'Google Chrome'"
+alias spotify="open -a Spotify"
 
 
 # If you ever need to remove Last Login message
