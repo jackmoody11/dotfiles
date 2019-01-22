@@ -4,11 +4,15 @@
 # NOTE: This is only intended for Mac OS #
 ##########################################
 
-# Install xcode command line tools
-xcode-select --install
+# Run `sh brew.sh` to run script
 
-# Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Install xcode command line tools
+command -v xcode-select >/dev/null 2>&1 || { echo >&2 "Installing Xcode Command Line Tools Now"; \
+xcode-select --install; }
+
+# Check to see if Homebrew is installed, and install it if it is not
+command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -107,28 +111,28 @@ brew install "tree" # Recursive directory listing
 
 brew install "mas" # Make installing apps from the App Store easier
 # https://github.com/mas-cli/mas
-cask "docker"
-cask "firefox"
-cask "google-backup-and-sync"
-cask "google-chrome"
-cask "java"
-cask "sublime-text"
-cask "brackets"
-cask "alfred"
-cask "adobe-acrobat-pro"
-cask "pycharm"
-cask "texmaker"
+brew cask install "docker"
+brew cask install "firefox"
+brew cask install "google-backup-and-sync"
+brew cask install "google-chrome"
+brew cask install "java"
+brew cask install "sublime-text"
+brew cask install "brackets"
+brew cask install "alfred"
+brew cask install "adobe-acrobat-pro"
+brew cask install "pycharm"
+brew cask install "texmaker"
 mas install 1176895641 # Install Spark application used for emails
 
 
 ########################################
 ################  Fonts ################
 ########################################
-cask "font-lato"
-cask "font-open-sans"
-cask "font-roboto"
-cask "font-inconsolata"
-cask "font-fira-code"
-cask "font-source-code-pro"
-cask "font-source-sans-pro"
-cask "font-source-serif-pro"
+brew cask install "font-lato"
+brew cask install "font-open-sans"
+brew cask install "font-roboto"
+brew cask install "font-inconsolata"
+brew cask install "font-fira-code"
+brew cask install "font-source-code-pro"
+brew cask install "font-source-sans-pro"
+brew cask install "font-source-serif-pro"
