@@ -6,7 +6,7 @@
 
 # Run `sh brew.sh` to run script
 
-# Install xcode command line tools
+# Install xcode command line tools if it is not
 command -v xcode-select >/dev/null 2>&1 || { echo >&2 "Installing Xcode Command Line Tools Now"; \
 xcode-select --install; }
 
@@ -128,6 +128,7 @@ mas install 1176895641 # Install Spark application used for emails
 ########################################
 ################  Fonts ################
 ########################################
+
 brew cask install "font-lato"
 brew cask install "font-open-sans"
 brew cask install "font-roboto"
