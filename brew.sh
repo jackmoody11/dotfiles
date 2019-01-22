@@ -57,7 +57,7 @@ brew install "libyaml" # YAML parser
 brew install "mysql" # Add MySQL
 brew install "node" # Add node.js
 brew install "openssl" # Add TLS and SSL protocols
-brew install "pearl" # Add pearl
+brew install "perl" # Add perl
 brew install "php" # Add PHP
 brew install "pre-commit" # Run commands before committing changes made in git repository
 brew install "python" # Add Python
