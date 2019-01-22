@@ -57,7 +57,7 @@ brew install "libyaml" # YAML parser
 brew install "mysql" # Add MySQL
 brew install "node" # Add node.js
 brew install "openssl" # Add TLS and SSL protocols
-brew install "perl" # Add perl
+brew install "perl" # Add Perl
 brew install "php" # Add PHP
 brew install "pre-commit" # Run commands before committing changes made in git repository
 brew install "python" # Add Python
@@ -65,7 +65,7 @@ brew install "postgresql" # Add Postgresql
 brew install "sphinx-doc" # Enable Sphinx documentation for Python projects
 brew install "sqlite" # Add SQLite
 brew install "redis" # Add redis
-brew install "ruby" # Add ruby
+brew install "ruby" # Add Ruby
 brew install "vim" # Add VIM
 brew install "zsh" # Add ZSH shell
 brew install "zsh-completions" # Add ZSH completions
@@ -127,7 +127,8 @@ mas install 1176895641 # Install Spark application used for emails
 cask "font-lato"
 cask "font-open-sans"
 cask "font-roboto"
-cask "font-source-code-pro-for-powerline"
+cask "font-inconsolata"
+cask "font-fira-code"
 cask "font-source-code-pro"
 cask "font-source-sans-pro"
 cask "font-source-serif-pro"
