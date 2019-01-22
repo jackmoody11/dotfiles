@@ -6,6 +6,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #################################################
 
 alias c='clear'
+alias tree="tree -C"
 
 # -F displays `/`for directories, `*` for executables, etc...
 alias ls='ls -F'

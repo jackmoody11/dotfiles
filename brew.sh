@@ -111,7 +111,7 @@ brew install "tree" # Recursive directory listing
 
 brew install "mas" # Make installing apps from the App Store easier
 # https://github.com/mas-cli/mas
-brew cask install "docker"
+# brew cask install "docker" # Currently, I do not need this
 brew cask install "firefox"
 brew cask install "google-backup-and-sync"
 brew cask install "google-chrome"
