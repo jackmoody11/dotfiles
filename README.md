@@ -12,6 +12,8 @@ In order to run the `brew.sh` setup, simply run `sh brew.sh` while in the `dotfi
 directory. This will install various applications on a Mac OS which I use.
 If you haven't downloaded Homebrew yet, this script will download it for you. You will
 likely need to change this file based on which applications you use.
+
+
 *Note: I still need to make Homebrew check if an application has been installed before downloading
 the package for it to save time. All apps should download as expected. It just takes
 longer because there is no check whether the app has already been downloaded before proceeding
