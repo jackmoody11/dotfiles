@@ -6,7 +6,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #################################################
 
 alias c='clear'
-alias tree="tree -C"
+alias tree="tree -C" # Colorize tree
 
 # -F displays `/`for directories, `*` for executables, etc...
 alias ls='ls -F'
@@ -84,4 +84,4 @@ export PS1="${titlebar}${green}➜  ${blue}\W ${cyan}\$(git_branch)${clear_attri
 
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash ] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash
+# [ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash ] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash
