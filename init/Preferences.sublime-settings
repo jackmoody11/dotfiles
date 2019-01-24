@@ -1,0 +1,25 @@
+{
+	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"material_theme_accent_bar": true,
+	"material_theme_accent_graphite": true,
+	"material_theme_autowidth": true,
+	"material_theme_contrast_mode": true,
+	"material_theme_status_bar": true,
+	"pep8": true,
+	"rulers":
+	[
+		72,
+		79
+	],
+	"scroll_past_end": false,
+	"tab_size": 4,
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"update_check": true
+}

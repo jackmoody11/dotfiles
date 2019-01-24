@@ -29,3 +29,11 @@ Setting up Mac OS Preferences
 In order to apply the settings for your Mac, you will need to run `source .macos`
 while in the `dotfiles` directory.
 
+
+Setting up Sublime Text
+-----------------------
+To set up Sublime Text with user preferences, run the following commands:
+```bash
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+ln -s ~/dotfiles/init/Preferences.sublime-settings
+```
