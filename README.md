@@ -9,31 +9,22 @@ own development environment.
 Setting up Apps
 ---------------
 In order to run the `brew.sh` setup, simply run `sh brew.sh` while in the `dotfiles`
-directory. This will install various applications on a Mac OS which I use.
+directory. This will install various useful tools which I use.
 If you haven't downloaded Homebrew yet, this script will download it for you. You will
-likely need to change this file based on which applications you use.
-
-
-*Note: I still need to make Homebrew check if an application has been installed before downloading
-the package for it to save time. All apps should download as expected. It just takes
-longer because there is no check whether the app has already been downloaded before proceeding
-to download the application and then finding a conflict.*
-
-
-Setting up Bash Preferences
----------------------------
-You may also need to `source .bashrc` in your `.bash_profile` file.
+likely need to change this file based on which tools (ex: python, java, vim, etc.) you use.
 
 Setting up Mac OS Preferences
 -----------------------------
-In order to apply the settings for your Mac, you will need to run `source .macos`
+In order to apply the settings for your Mac, you will need to run `sh .macos`
 while in the `dotfiles` directory.
-
 
 Setting up Sublime Text
 -----------------------
-To set up Sublime Text with user preferences, run the following commands:
+By default, Sublime Text is setup when running `sh .macos`. However, if you
+don't want to use the settings from `.macos`, then you can run the following
+commands to setup sublime with the preferences from `init/Preferences.sublime-settings`:
+
 ```bash
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-ln -s ~/dotfiles/init/Preferences.sublime-settings
+ln -sf ~/dotfiles/init/Preferences.sublime-settings # overwrite symlink if one already exists
 ```
