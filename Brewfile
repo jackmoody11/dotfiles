@@ -83,5 +83,3 @@ brew "tree" # Recursive directory listing
 
 brew "mas" # Make installing apps from the App Store easier
 # https://github.com/mas-cli/mas
-# cask "docker" # Currently, I do not need this
-# Check if app is installed before trying to install it
