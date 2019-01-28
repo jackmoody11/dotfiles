@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"CodeMap",
+		"Dracula Color Scheme",
+		"Material Theme",
+		"Package Control",
+		"PackageResourceViewer",
+		"Python PEP8 Autoformat",
+		"SideBarEnhancements",
+		"SublimeREPL"
+	]
+}

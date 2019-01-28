@@ -171,8 +171,12 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 ############ Sublime Text ##############
 ########################################
 
+# Install Package Manager
+curl -o ~/Library/Application\ Support/Sublime\ Text\ 3/Installed Packages "https://packagecontrol.io/Package%20Control.sublime-package"
 # Install Sublime Text settings (force overwrite if they exist)
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+# Overwrite symlinks if they already exist
 ln -sf ~/dotfiles/init/Preferences.sublime-settings
+ln -sf ~/dotfiles/init/Package Control.sublime-settings
 cd ~
 
