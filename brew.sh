@@ -29,5 +29,4 @@ BREW_PREFIX=$(brew --prefix)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
-
 mas install 1176895641 # Install Spark application used for emails

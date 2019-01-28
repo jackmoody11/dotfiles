@@ -1,5 +1,3 @@
-cask_args appdir: "/Applications"
-
 # Install some other useful utilities like `sponge`.
 brew "moreutils"
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
