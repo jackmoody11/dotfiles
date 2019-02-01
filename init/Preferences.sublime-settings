@@ -6,9 +6,11 @@
 		"Vintage"
 	],
 	"material_theme_accent_bar": true,
-	"material_theme_accent_graphite": true,
+	"material_theme_accent_scrollbars": true,
+	"material_theme_accent_titlebar": true,
 	"material_theme_autowidth": true,
-	"material_theme_contrast_mode": true,
+	"material_theme_bold_tab": true,
+	"material_theme_bright_scrollbars": true,
 	"material_theme_status_bar": true,
 	"pep8": true,
 	"rulers":
@@ -18,7 +20,7 @@
 	],
 	"scroll_past_end": false,
 	"tab_size": 4,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "Material-Theme-Palenight.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": true
