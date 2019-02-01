@@ -1,5 +1,19 @@
 #!/usr/bin/env bash
 
+### To see what a certain preference is called, do the following in the command line:
+# `defaults read > before`
+# Make whatever changes to settings you want to automate
+# `defaults read > after`
+# `diff before after`
+
+### To see all default domains
+# `defaults domains | tr ',' '\n'` will separate domains with newline
+
+### To see all preferences for specific domain
+# `defaults read NAME_OF_DOMAIN`
+
+### For further reference, see
+### https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
 
 ########################################
 ############### Setup ##################
@@ -11,6 +25,9 @@ osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for the administrator password upfront
 sudo -v
+
+# Get name of User
+USER="$(id -un)"
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -63,17 +80,30 @@ defaults write NSGlobalDomain AppleMetricUnits -bool false
 # Hide language menu from the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool false
 
-################ Finder ################
-# Finder: don't show path bar
-defaults write com.apple.finder ShowPathbar -bool false
-# Don't display full POSIX path as Finder window title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
-
 ############## Dashboard ###############
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
+
+
+########################################
+################ Finder ################
+########################################
+
+# Finder: don't show path bar
+defaults write com.apple.finder ShowPathbar -bool false
+# Don't display full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
+# Do not show dotfiles in Finder by default. Use SHIFT+⌘+.
+defaults write com.apple.finder AppleShowAllFiles -string NO
+# Set default directory open when opening Finder
+defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/${USER}/Documents/"
+
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -int 0
+defaults write com.apple.finder ShowHardDrivesOnDesktop -int 0
+defaults write com.apple.finder ShowMountedServersOnDesktop -int 0
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -int 1
 
 
 ########################################
