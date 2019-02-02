@@ -78,6 +78,13 @@ brew "pkg-config" # Helper tool often used when installing apps and libraries
 brew "tree" # Recursive directory listing
 
 ########################################
+################# LaTeX ################
+########################################
+
+cask "mactex-no-gui"
+
+
+########################################
 ################# Apps #################
 ########################################
 

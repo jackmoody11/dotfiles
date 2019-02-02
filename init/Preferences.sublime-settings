@@ -9,7 +9,7 @@
 	"material_theme_accent_scrollbars": true,
 	"material_theme_accent_titlebar": true,
 	"material_theme_autowidth": true,
-	"material_theme_bold_tab": true,
+	"material_theme_bold_tab": false,
 	"material_theme_bright_scrollbars": true,
 	"material_theme_status_bar": true,
 	"pep8": true,

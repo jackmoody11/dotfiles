@@ -1,3 +1,5 @@
+# Add `code` keyword to Terminal
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -32,6 +34,9 @@ alias cpu="top -F -R -o cpu"
 # Open applications
 alias google="open -a 'Google Chrome'"
 alias spotify="open -a Spotify"
+
+# LaTeX Cleanup
+alias cleantex='find . \( -name '*.log' -or -name '*.synctex.gz' -or -name '*.fdb_latexmk' -or -name '*.fls' -or -name '*.aux' \) -type f -delete'
 
 
 # If you ever need to remove Last Login message
