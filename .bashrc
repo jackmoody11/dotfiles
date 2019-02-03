@@ -60,7 +60,7 @@ cyan="\[$(tput setaf 6)\]"
 white="\[$(tput setaf 7)\]"
 
 # Title bar - "user@host: ~"
-title="\u@\h: \w"
+title="\u: \w"
 titlebar="\[\033]0;"$title"\007\]"
 
 # Clear attributes
