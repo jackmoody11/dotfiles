@@ -74,9 +74,13 @@ clear_attributes="\[$(tput sgr0)\]"
 function gac(){
     git add . && git commit -m "$1"
 }
-
+# Git add, commit, and push
 function gacp() {
     git add . && git commit -m "$1" && git push
+}
+# Git commit and push
+function gcp() {
+    git commit -m "$1" && git push
 }
 
 # Show git branch on command line
