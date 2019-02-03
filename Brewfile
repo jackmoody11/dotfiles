@@ -88,5 +88,6 @@ cask "mactex-no-gui"
 ################# Apps #################
 ########################################
 
+cask "visual-studio-code" # Install VS Code
 brew "mas" # Make installing apps from the App Store easier
 # https://github.com/mas-cli/mas
