@@ -19,5 +19,8 @@
         "borderColor : {color}; opacity: 0.5",
         "backgroundColor: {color}"
     ],
-    "editor.matchBrackets": false
+    "editor.matchBrackets": false,
+    "[latex]": {
+        "editor.wordWrap": "on"
+    }
 }

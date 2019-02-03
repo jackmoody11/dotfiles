@@ -36,7 +36,7 @@ alias google="open -a 'Google Chrome'"
 alias spotify="open -a Spotify"
 
 # LaTeX Cleanup
-alias cleantex='find . \( -name '*.log' -or -name '*.synctex.gz' -or -name '*.fdb_latexmk' -or -name '*.fls' -or -name '*.aux' \) -type f -delete'
+alias cleantex="find . \( -name '*.log' -or -name '*.synctex.gz' -or -name '*.fdb_latexmk' -or -name '*.fls' -or -name '*.aux' \) -delete"
 
 
 # If you ever need to remove Last Login message
@@ -71,16 +71,31 @@ clear_attributes="\[$(tput sgr0)\]"
 ###################################################
 
 # Git add and commit
-function gac(){
+gac(){
     git add . && git commit -m "$1"
 }
 # Git add, commit, and push
-function gacp() {
+gacp() {
     git add . && git commit -m "$1" && git push
 }
 # Git commit and push
-function gcp() {
+gcp() {
     git commit -m "$1" && git push
+}
+
+# Delete all PDFs in current directory (with confirmation)
+delpdf(){
+    while true; do
+    echo "PDFs to be deleted"
+    find . -name '*.pdf'
+    read -p "Do you wish to delete all PDf files in this directory?" yn
+    case $yn in
+        [Yy]* ) find . -name '*.pdf' -delete; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
 }
 
 # Show git branch on command line
