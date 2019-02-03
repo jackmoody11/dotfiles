@@ -22,9 +22,9 @@ Setting up Sublime Text
 -----------------------
 By default, Sublime Text is setup when running `sh .macos`. However, if you
 don't want to use the settings from `.macos`, then you can run the following
-commands to setup sublime with the preferences from `init/Preferences.sublime-settings`:
+commands to setup sublime with the preferences from `init/st3/Preferences.sublime-settings`:
 
 ```bash
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-ln -sf ~/dotfiles/init/Preferences.sublime-settings # overwrite symlink if one already exists
+ln -sf ~/dotfiles/init/st3/Preferences.sublime-settings # overwrite symlink if one already exists
 ```
