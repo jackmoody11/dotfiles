@@ -22,6 +22,8 @@ alias gc="git commit -m"
 alias gp="git push"
 alias gd="git diff"
 alias gs="git status"
+alias gb="git branch"
+alias gsb="git checkout" # stands for git switch branch
 
 # For going up multiple directories
 alias cd..='cd ..' # For mistyping
@@ -87,6 +89,11 @@ gacp() {
 # Git commit and push
 gcp() {
     git commit -m "$1" && git push
+}
+
+# Create new git branch and go into it
+gnb() {
+    git checkout -b "$1" && git checkout "$1"
 }
 
 # Delete all PDFs in current directory (with confirmation)
