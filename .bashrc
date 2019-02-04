@@ -16,9 +16,12 @@ alias ls.='ls -Fd .*' # Show dotfiles and hide others
 alias ~="cd ~" # Make it easier to go to root
 
 # Git
+alias g="git"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push"
+alias gd="git diff"
+alias gs="git status"
 
 # For going up multiple directories
 alias cd..='cd ..' # For mistyping
@@ -38,7 +41,10 @@ alias spotify="open -a Spotify"
 # LaTeX Cleanup
 alias cleantex="find . \( -name '*.log' -or -name '*.synctex.gz' -or -name '*.fdb_latexmk' -or -name '*.fls' -or -name '*.aux' \) -delete"
 
-
+# Python
+# Open virtual environment
+alias venv="source venv/bin/activate"
+alias xvenv="deactivate venv"
 # If you ever need to remove Last Login message
 # Use `touch .hushlogin`
 
