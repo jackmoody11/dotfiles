@@ -22,5 +22,16 @@
     "editor.matchBrackets": false,
     "[latex]": {
         "editor.wordWrap": "on"
-    }
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.github": true,
+        "**/.idea": true,
+        "**/.pytest_cache": true,
+        "**/.vscode": true,
+        "**/venv": true
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "python.linting.enabled": false
 }
