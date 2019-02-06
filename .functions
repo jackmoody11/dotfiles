@@ -1,0 +1,41 @@
+###################################################
+#################### Functions ####################
+###################################################
+
+# Git add and commit
+gac(){
+    git add . && git commit -m "$1"
+}
+# Git add, commit, and push
+gacp() {
+    git add . && git commit -m "$1" && git push
+}
+# Git commit and push
+gcp() {
+    git commit -m "$1" && git push
+}
+
+# Create new git branch and go into it
+gnb() {
+    git checkout -b "$1" && git checkout "$1"
+}
+
+# Delete all PDFs in current directory (with confirmation)
+delpdf(){
+    while true; do
+    echo "PDFs to be deleted"
+    find . -name '*.pdf'
+    read -p "Do you wish to delete all PDf files in this directory?" yn
+    case $yn in
+        [Yy]* ) find . -name '*.pdf' -delete; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+}
+
+# Show git branch on command line
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /';
+}

@@ -32,6 +32,15 @@
         "**/.vscode": true,
         "**/venv": true
     },
+    "files.associations": {
+        "Brewfile": "ruby",
+        "*.functions": "shellscript",
+        "*.aliases": "shellscript",
+        "*.bash_profile": "shellscript",
+        "*.bashrc": "shellscript",
+        "*.macos": "shellscript",
+        "*.sublime-settings": "json"
+    },
     "workbench.startupEditor": "newUntitledFile",
     "python.linting.enabled": false
 }

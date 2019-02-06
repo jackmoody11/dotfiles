@@ -1,0 +1,45 @@
+#################################################
+#################### Aliases ####################
+#################################################
+
+alias c='clear'
+alias tree="tree -C" # Colorize tree
+
+# -F displays `/`for directories, `*` for executables, etc...
+alias ls='ls -F'
+alias ls.='ls -Fd .*' # Show dotfiles and hide others
+alias ~="cd ~" # Make it easier to go to root
+alias dot="cd ~/dotfiles"
+
+# Git
+alias g="git"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+alias gd="git diff"
+alias gs="git status"
+alias gb="git branch"
+alias gsb="git checkout" # stands for git switch branch
+
+# For going up multiple directories
+alias cd..='cd ..' # For mistyping
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# Track CPU usage
+alias cpu="top -F -R -o cpu"
+
+# Open applications
+alias google="open -a 'Google Chrome'"
+alias spotify="open -a Spotify"
+
+# LaTeX Cleanup
+alias cleantex="find . \( -name '*.log' -or -name '*.synctex.gz' -or -name '*.fdb_latexmk' -or -name '*.fls' -or -name '*.aux' \) -delete"
+
+# Python
+# Open virtual environment
+alias venv="source venv/bin/activate"
+alias xvenv="deactivate venv"
