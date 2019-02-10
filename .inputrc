@@ -1,0 +1,4 @@
+# Make tab completion case insensitive
+set completion-ignore-case on
+# Make tab completion easier if more than one match
+set show-all-if-ambiguous on

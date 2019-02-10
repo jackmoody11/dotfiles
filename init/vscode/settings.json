@@ -28,6 +28,7 @@
         "**/__pycache__": true,
         "**/.github": true,
         "**/.idea": true,
+        "**/.ipynb_checkpoints": true,
         "**/.pytest_cache": true,
         "**/.vscode": true,
         "**/venv": true
@@ -39,6 +40,7 @@
         "*.bash_profile": "shellscript",
         "*.bashrc": "shellscript",
         "*.macos": "shellscript",
+        "*.inputrc": "shellscript",
         "*.sublime-settings": "json"
     },
     "workbench.startupEditor": "newUntitledFile",

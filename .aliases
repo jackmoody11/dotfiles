@@ -8,6 +8,7 @@ alias tree="tree -C" # Colorize tree
 # -F displays `/`for directories, `*` for executables, etc...
 alias ls='ls -F'
 alias ls.='ls -Fd .*' # Show dotfiles and hide others
+alias ll='ls -aoFh' # Show all files and directories with sizes
 alias ~="cd ~" # Make it easier to go to root
 alias dot="cd ~/dotfiles"
 
@@ -33,13 +34,15 @@ alias .5='cd ../../../../..'
 alias cpu="top -F -R -o cpu"
 
 # Open applications
-alias google="open -a 'Google Chrome'"
+alias chrome="open -a 'Google Chrome'"
 alias spotify="open -a Spotify"
 
 # LaTeX Cleanup
 alias cleantex="find . \( -name '*.log' -or -name '*.synctex.gz' -or -name '*.fdb_latexmk' -or -name '*.fls' -or -name '*.aux' \) -delete"
 
-# Python
+### Python
 # Open virtual environment
+alias mkvenv="virtualenv venv"
 alias venv="source venv/bin/activate"
 alias xvenv="deactivate venv"
+alias jn="jupyter notebook"

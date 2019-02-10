@@ -12,6 +12,8 @@
 ### To see all preferences for specific domain
 # `defaults read NAME_OF_DOMAIN`
 
+### In order to run this, simply type `source .macos` in Terminal
+
 ### For further reference, see
 ### https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
 
@@ -32,7 +34,6 @@ USER="$(id -un)"
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# In order to run this, simply type `source .macos` in Terminal
 
 ########################################
 ######### General Preferences ##########
@@ -222,10 +223,9 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 curl "https://packagecontrol.io/Package%20Control.sublime-package" --output "Package Control.sublime-package"
 mv "Package Control.sublime-package" ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
 # Install Sublime Text settings (force overwrite if they exist)
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-# Overwrite symlinks if they already exist
-ln -sf ~/dotfiles/init/st3/Preferences.sublime-settings
-ln -sf ~/dotfiles/init/st3/Package Control.sublime-settings
+ln -sf ~/dotfiles/init/st3/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+ln -sf ~/dotfiles/init/st3/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+
 
 ########################################
 ############### VS Code ################
@@ -234,7 +234,9 @@ ln -sf ~/dotfiles/init/st3/Package Control.sublime-settings
 # Create symlinks to settings
 ln -sf ~/dotfiles/init/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json 
 ln -sf ~/dotfiles/init/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
+
+# Add .inputrc symlink
+ln -sf ~/dotfiles/.inputrc ~/.inputrc
+
 # Go back to root
 cd ~
-
-

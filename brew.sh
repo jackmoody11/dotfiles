@@ -30,3 +30,4 @@ BREW_PREFIX=$(brew --prefix)
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 mas install 1176895641 # Install Spark application used for emails
+pip3 install jupyter # Install Jupyter for Python
