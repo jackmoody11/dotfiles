@@ -47,7 +47,7 @@ mkd() {
 }
 
 google() {
-    if [[ $1 == https://* ]] || [[ $1 == http:// ]] ;
+    if [[ $1 == https://* ]] || [[ $1 == http://* ]] ;
     then
         open -a 'Google Chrome' $1
     else
