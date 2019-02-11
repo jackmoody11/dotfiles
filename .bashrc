@@ -4,7 +4,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # If you ever need to remove Last Login message
-# Use `touch .hushlogin`
+# Use `touch .hushlogin` in root directory
 
 ######################################################
 #################### Color Scheme ####################

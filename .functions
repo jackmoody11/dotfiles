@@ -2,6 +2,7 @@
 #################### Functions ####################
 ###################################################
 
+###################### Git ########################
 # Git add and commit
 gac(){
     git add . && git commit -m "$1"
@@ -20,6 +21,12 @@ gnb() {
     git checkout -b "$1" && git checkout "$1"
 }
 
+# Show git branch on command line
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /';
+}
+
+############### General ################
 # Delete all PDFs in current directory (with confirmation)
 delpdf(){
     while true; do
@@ -39,7 +46,11 @@ mkd() {
     mkdir "$1" && cd "$1"
 }
 
-# Show git branch on command line
-git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /';
+google() {
+    if [[ $1 == https://* ]] || [[ $1 == http:// ]] ;
+    then
+        open -a 'Google Chrome' $1
+    else
+        open -a 'Google Chrome' 'https://'$1
+    fi
 }
