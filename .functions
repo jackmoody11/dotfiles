@@ -54,3 +54,19 @@ google() {
         open -a 'Google Chrome' 'https://'$1
     fi
 }
+
+
+github() {
+    if [[ $# -eq 0 ]] ;
+    then
+        open 'https://github.com'
+    elif [[ $1 == */* ]] ;
+    then
+        open 'https://github.com/'$1
+    elif [[ $1 == 'me' ]] ;
+    then
+        open 'https://github.com/jackmoody11'
+    else
+        echo "Invalid option. Valid options include <user>/<repo>, 'me', and ''"
+    fi
+}
