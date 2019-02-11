@@ -26,6 +26,22 @@ git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /';
 }
 
+# Easily google Github repositories from command line
+github() {
+    if [[ $# -eq 0 ]] ;
+    then
+        open 'https://github.com'
+    elif [[ $1 == */* ]] ;
+    then
+        open 'https://github.com/'$1
+    elif [[ $1 == 'me' ]] ;
+    then
+        open 'https://github.com/jackmoody11'
+    else
+        echo "Invalid option. Valid options include <user>/<repo>, 'me', and ''"
+    fi
+}
+
 ############### General ################
 # Delete all PDFs in current directory (with confirmation)
 delpdf(){
@@ -46,27 +62,17 @@ mkd() {
     mkdir "$1" && cd "$1"
 }
 
+# Easily open website in google from command line
 google() {
-    if [[ $1 == https://* ]] || [[ $1 == http://* ]] ;
+    if open -Ra "Google Chrome" ; 
     then
-        open -a 'Google Chrome' $1
+        if [[ $1 == https://* ]] || [[ $1 == http://* ]] ;
+        then
+            open -a 'Google Chrome' $1
+        else
+            open -a 'Google Chrome' 'https://'$1
+        fi
     else
-        open -a 'Google Chrome' 'https://'$1
-    fi
-}
-
-
-github() {
-    if [[ $# -eq 0 ]] ;
-    then
-        open 'https://github.com'
-    elif [[ $1 == */* ]] ;
-    then
-        open 'https://github.com/'$1
-    elif [[ $1 == 'me' ]] ;
-    then
-        open 'https://github.com/jackmoody11'
-    else
-        echo "Invalid option. Valid options include <user>/<repo>, 'me', and ''"
+        echo "Google Chrome must be installed to use this function."
     fi
 }
