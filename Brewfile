@@ -43,6 +43,7 @@ brew "sqlite" # Add SQLite
 brew "redis" # Add redis
 brew "ruby" # Add Ruby
 brew "vim" # Add VIM
+brew "wget" # Add wget
 brew "zsh" # Add ZSH shell
 brew "zsh-completions" # Add ZSH completions
 

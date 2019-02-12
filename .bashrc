@@ -23,12 +23,12 @@ magenta="\[$(tput setaf 5)\]"
 cyan="\[$(tput setaf 6)\]"
 white="\[$(tput setaf 7)\]"
 
-# Title bar - "user@host: ~"
+# Title bar - "user: ~"
 title="\u: \w"
 titlebar="\[\033]0;"$title"\007\]"
 
 # Blinking bar
-blink="\033[5 q"
+blink="\[\033[5 q\]"
 
 # Clear attributes
 clear_attributes="\[$(tput sgr0)\]"
