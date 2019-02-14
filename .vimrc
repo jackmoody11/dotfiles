@@ -19,6 +19,14 @@ let g:dracula_italic = 0
 colorscheme dracula
 highlight Normal ctermbg=None
 
+""" General
+set timeoutlen=750 ttimeoutlen=0
 
-" Mappings
+""" Mappings
+" Insert mode
 inoremap jj <ESC>
+
+" Visual mode
+" For quickly escaping visual mode
+xnoremap jk <ESC>
+xnoremap kj <ESC>
