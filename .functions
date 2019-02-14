@@ -6,30 +6,30 @@
 
 ###################### Git ########################
 # Git add and commit
-function gac(){
+gac() {
     git add . && git commit -m "$1"
 }
 # Git add, commit, and push
-function gacp() {
+gacp() {
     git add . && git commit -m "$1" && git push
 }
 # Git commit and push
-function gcp() {
+gcp() {
     git commit -m "$1" && git push
 }
 
 # Create new git branch and go into it
-function gnb() {
+gnb() {
     git checkout -b "$1" && git checkout "$1"
 }
 
 # Show git branch on command line
-function git_branch() {
+git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /';
 }
 
 # Easily google Github repositories from command line
-function github() {
+github() {
     if [[ $# -eq 0 ]] ;
     then
         open 'https://github.com'
@@ -46,7 +46,7 @@ function github() {
 
 ############### General ################
 # Delete all PDFs in current directory (with confirmation)
-function delpdf(){
+delpdf(){
     while true; do
     echo "PDFs to be deleted"
     find . -name '*.pdf'
@@ -60,16 +60,16 @@ done
 
 }
 
-function mkd() {
+mkd() {
     mkdir "$1" && cd "$1"
 }
 
-function manpdf() {
+manpdf() {
     man -t $1 | open -f -a /Applications/Preview.app
 }
 
 # Easily open website in google from command line
-function google() {
+google() {
     if open -Ra "Google Chrome" ; 
     then
         if [[ $1 == https://* ]] || [[ $1 == http://* ]] ;
