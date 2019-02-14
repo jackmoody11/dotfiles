@@ -5,7 +5,7 @@
 ##########################################
 
 # Run `sh brew.sh` to run script
-
+# To learn more about brew, check out https://github.com/Homebrew/homebrew-bundle
 # Install xcode command line tools if it is not
 command -v xcode-select >/dev/null 2>&1 || { echo >&2 "Installing Xcode Command Line Tools Now"; \
 xcode-select --install; }
