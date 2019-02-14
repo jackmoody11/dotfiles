@@ -62,6 +62,10 @@ mkd() {
     mkdir "$1" && cd "$1"
 }
 
+manpdf() {
+    man -t $1 | open -f -a /Applications/Preview.app
+}
+
 # Easily open website in google from command line
 google() {
     if open -Ra "Google Chrome" ; 
