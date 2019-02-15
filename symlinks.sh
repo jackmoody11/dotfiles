@@ -1,3 +1,7 @@
+########################################
+################# Vim ##################
+########################################
+
 ln -sf ~/dotfiles/.vim ~/.vim
 
 
@@ -18,5 +22,12 @@ ln -sf ~/dotfiles/init/st3/Package\ Control.sublime-settings ~/Library/Applicati
 ln -sf ~/dotfiles/init/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json 
 ln -sf ~/dotfiles/init/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
 
+########################################
+############### General ################
+########################################
+
 # Add .inputrc symlink
 ln -sf ~/dotfiles/.inputrc ~/.inputrc
+
+# Add .hushlogin
+ln -sf ~/dotfiles/.hushlogin ~/.hushlogin
