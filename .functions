@@ -18,6 +18,10 @@ gcp() {
     git commit -m "$1" && git push
 }
 
+# .gitignore update
+giup() {
+    git rm -r --cached .
+}
 # Create new git branch and go into it
 gnb() {
     git checkout -b "$1" && git checkout "$1"
