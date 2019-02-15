@@ -9,18 +9,21 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
 " Configure Dracula to work
-set number
-set termguicolors
 let g:dracula_italic = 0
 colorscheme dracula
 highlight Normal ctermbg=None
 
 """ General
+set number " insert line numbers
+set termguicolors " allow terminal colors
 set timeoutlen=750 ttimeoutlen=0
+
+set textwidth=80 " make it obvious where 80 characters is
 
 """ Mappings
 " Insert mode
