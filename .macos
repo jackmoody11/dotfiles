@@ -95,8 +95,13 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
+
+########################################
 ############## Appearance ##############
-defaults write /Library/Preferences/com.apple.loginwindow LoginWindowTest "Welcome back, Jack."
+########################################
+
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText
+"Welcome back, Jack."
 
 
 ########################################
@@ -109,6 +114,7 @@ defaults write com.apple.finder ShowPathbar -bool false
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
 # Do not show dotfiles in Finder by default. Use SHIFT+⌘+.
 defaults write com.apple.finder AppleShowAllFiles -string NO
+
 # Set default directory open when opening Finder
 defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/${USER}/Documents/"
 
