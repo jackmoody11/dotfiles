@@ -1,5 +1,12 @@
-DS_Store
+# DS_Store
+*.DS_Store
+
+# Vim
+/plugged
+/bundle
 *.swp
 
-*/plugged
-*/bundle
+# Jupyter Notebook theme
+/custom
+/nbconfig
+migrated
