@@ -1,5 +1,5 @@
-.DS_Store
+DS_Store
 *.swp
 
-*.vim/plugged
-*.vim/bundle
+*/plugged
+*/bundle
