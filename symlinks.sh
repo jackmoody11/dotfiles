@@ -37,3 +37,6 @@ ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 
 # Add .bashrc
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
+
+# Add .jupyter/
+ln -sf ~/dotfiles/.jupyter ~/.jupyter
