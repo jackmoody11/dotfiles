@@ -51,6 +51,11 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
 
+############### Keyboard ###############
+echo "You will need to restart for keyboard speed changes to take effect"
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
 ############# File Saving ##############
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
@@ -81,6 +86,9 @@ defaults write NSGlobalDomain AppleMetricUnits -bool false
 # Hide language menu from the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool false
 
+# Set the timezone; see `sudo systemsetup -listtimezones` for other values
+sudo systemsetup -settimezone "America/New_York" > /dev/null
+
 ############## Dashboard ###############
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
@@ -89,6 +97,7 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 
 ############## Appearance ##############
 defaults write /Library/Preferences/com.apple.loginwindow LoginWindowTest "Welcome back, Jack."
+
 
 ########################################
 ################ Finder ################
@@ -108,6 +117,10 @@ defaults write com.apple.finder ShowHardDrivesOnDesktop -int 0
 defaults write com.apple.finder ShowMountedServersOnDesktop -int 0
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -int 1
 
+# Automatically open a new Finder window when a volume is mounted
+defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 ########################################
 ############### Safari #################
