@@ -5,8 +5,9 @@
 */plugged
 */bundle
 *.swp
+*.netrwhist
 
 # Jupyter Notebook theme
-/custom
-/nbconfig
+*/custom
+*/nbconfig
 migrated
