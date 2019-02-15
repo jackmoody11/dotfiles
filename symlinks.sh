@@ -31,3 +31,9 @@ ln -sf ~/dotfiles/.inputrc ~/.inputrc
 
 # Add .hushlogin
 ln -sf ~/dotfiles/.hushlogin ~/.hushlogin
+
+# Add .bash_profile
+ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
+
+# Add .bashrc
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
