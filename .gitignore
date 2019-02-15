@@ -2,8 +2,8 @@
 *.DS_Store
 
 # Vim
-/plugged
-/bundle
+*/plugged
+*/bundle
 *.swp
 
 # Jupyter Notebook theme
