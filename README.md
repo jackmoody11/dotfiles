@@ -16,7 +16,8 @@ likely need to change this file based on which tools (ex: python, java, vim, etc
 Setting up Mac OS Preferences
 -----------------------------
 In order to apply the settings for your Mac, you will need to run `sh .macos`
-while in the `dotfiles` directory.
+while in the `dotfiles` directory. Alternatively, you can run `sh bootstrap.sh`
+to run `brew.sh`, `symlinks.sh`, as well as `.macos`.
 
 Setting up Sublime Text
 -----------------------
@@ -28,3 +29,6 @@ commands to setup sublime with the preferences from `init/st3/Preferences.sublim
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 ln -sf ~/dotfiles/init/st3/Preferences.sublime-settings # overwrite symlink if one already exists
 ```
+
+Note that ST3 is automatically installed as done in `.macos` when `bootstrap.sh`
+is run.
