@@ -39,6 +39,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ######### General Preferences ##########
 ########################################
 
+mas install 1176895641 # Install Spark application used for emails
+pip3 install jupyter # Install Jupyter for Python
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
