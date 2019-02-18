@@ -1,0 +1,766 @@
+➜  ~ python3
+Python 3.7.2 (default, Feb 12 2019, 08:15:36) 
+[Clang 10.0.0 (clang-1000.11.45.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from __future__ import braces
+  File "<stdin>", line 1
+SyntaxError: not a chance
+>>> c
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'c' is not defined
+>>> exit()
+➜  ~ c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  ~ cd Documents/Temp/
+➜  Temp code te
+test.js  test.py  
+➜  Temp code test.py 
+➜  Temp python3 test.py
+  File "test.py", line 4
+    print(i, end=', ') for i in tt1
+                         ^
+SyntaxError: invalid syntax
+➜  Temp python3 test.py
+102, 0.5, 0.591, 0.529, 10, 42, 26, 6, 8, 17, 24, ➜  Temp c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  Temp vim test.py
+➜  Temp vim .
+➜  Temp c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  Temp ~
+➜  ~ cd dotfiles/
+➜  dotfiles (master) ls
+Brewfile      README.md     bootstrap.sh  brew.sh       init/         symlinks.sh
+➜  dotfiles (master) ls.
+./             .bash_profile  .git/          .inputrc       .vim/
+../            .bashrc        .gitignore     .jupyter/      .vimrc
+.aliases       .functions     .hushlogin     .macos
+➜  dotfiles (master) vim .vimrc
+➜  dotfiles (master) c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  dotfiles (master) ~
+➜  ~ cd Documents/Temp/
+➜  Temp vim .
+
+Python 3.7.2 (default, Feb 12 2019, 08:15:36) 
+[Clang 10.0.0 (clang-1000.11.45.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+Press ENTER or type command to continue
+➜  Temp c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  Temp vim .
+
+Hello, world
+
+Press ENTER or type command to continue
+➜  Temp c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  Temp `
+> ^C
+➜  Temp ~
+➜  ~ c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  ~ cd dotfiles/
+➜  dotfiles (master) vim .
+
+
+Press ENTER or type command to continue
+➜  dotfiles (master) .1
+➜  ~ ls
+Applications/         Downloads/            Pictures/             dotfiles/
+Books/                Library/              Public/               iterm/
+Creative Cloud Files/ Local Sites/          PycharmProjects/      jetbrains/
+Desktop/              Movies/               anaconda3/            node_modules/
+Documents/            Music/                bootstrap.sh          package-lock.json
+➜  ~ cd dotfiles/
+➜  dotfiles (master) ls
+Brewfile      bootstrap.sh  init/         symlinks.sh
+README.md     brew.sh       setup/
+➜  dotfiles (master) vim .
+
+
+Press ENTER or type command to continue
+
+Press ENTER or type command to continue
+➜  dotfiles (master) c
+
+
+
+
+
+➜  dotfiles (master) ls
+Brewfile      README.md     bootstrap.sh  brew.sh       init/         setup/
+➜  dotfiles (master) cd setup/
+➜  setup (master) ls
+symlinks.sh
+➜  setup (master) ~
+➜  ~ ls
+Applications/         Downloads/            Pictures/             dotfiles/
+Books/                Library/              Public/               iterm/
+Creative Cloud Files/ Local Sites/          PycharmProjects/      jetbrains/
+Desktop/              Movies/               anaconda3/            node_modules/
+Documents/            Music/                bootstrap.sh          package-lock.json
+➜  ~ cd dotfiles/
+➜  dotfiles (master) vim .
+
+
+Press ENTER or type command to continue
+➜  dotfiles (master) ls
+Brewfile        bootstrap.sh    init/           setup/
+README.md       brew.sh         install-all.sh
+➜  dotfiles (master) mv install-all.sh setup/install-all.sh
+➜  dotfiles (master) ls
+Brewfile      README.md     bootstrap.sh  brew.sh       init/         setup/
+➜  dotfiles (master) vim .
+
+
+Press ENTER or type command to continue
+
+Press ENTER or type command to continue
+
+Press ENTER or type command to continue
+
+Press ENTER or type command to continue
+➜  dotfiles (master) c
+
+➜  dotfiles (master) vim .
+➜  dotfiles (master) gd
+diff --git a/.macos b/.macos
+index 0a5421e..615a0c0 100644
+--- a/.macos
++++ b/.macos
+@@ -39,6 +39,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+ ######### General Preferences ##########
+ ########################################
+ 
++mas install 1176895641 # Install Spark application used for emails
++pip3 install jupyter # Install Jupyter for Python
++
+ # Disable the sound effects on boot
+ sudo nvram SystemAudioVolume=" "
+ 
+diff --git a/bootstrap.sh b/bootstrap.sh
+index 72718db..652b8e9 100644
+--- a/bootstrap.sh
++++ b/bootstrap.sh
+@@ -1,4 +1,43 @@
+ #!/usr/bin/env bash
+-sh .macos
+-sh brew.sh
+-sh symlinks.sh
++
++# turn on "strict mode"
++set -euo pipefail
++
+➜  dotfiles (master) 
+➜  dotfiles (master) gs
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .macos
+	modified:   bootstrap.sh
+	deleted:    brew.sh
+	deleted:    symlinks.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	dotfiles-support
+	setup/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  dotfiles (master) ga .
+➜  dotfiles (master) gc "Start restructuring"
+[master 75fdc63] Start restructuring
+ 7 files changed, 132 insertions(+), 37 deletions(-)
+ rewrite bootstrap.sh (64%)
+ delete mode 100644 brew.sh
+ create mode 100644 dotfiles-support
+ create mode 100644 setup/install-all.sh
+ create mode 100644 setup/install/install-brew.sh
+ rename symlinks.sh => setup/symlinks.sh (100%)
+➜  dotfiles (master) gnb structure
+Switched to a new branch 'structure'
+Already on 'structure'
+➜  dotfiles (structure) gb
+  master
+* structure
+➜  dotfiles (structure) gs
+On branch structure
+nothing to commit, working tree clean
+➜  dotfiles (structure) gd
+➜  dotfiles (structure) gsb master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+➜  dotfiles (master) vim .
+➜  dotfiles (master) gsb structure
+Switched to branch 'structure'
+➜  dotfiles (structure) c
+
+➜  dotfiles (structure) vim .
+➜  dotfiles (structure) gsb master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+➜  dotfiles (master) git pull
+Already up to date.
+➜  dotfiles (master) git diff master origin/master
+diff --git a/.macos b/.macos
+index 615a0c0..0a5421e 100644
+--- a/.macos
++++ b/.macos
+@@ -39,9 +39,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+ ######### General Preferences ##########
+ ########################################
+ 
+-mas install 1176895641 # Install Spark application used for emails
+-pip3 install jupyter # Install Jupyter for Python
+-
+ # Disable the sound effects on boot
+ sudo nvram SystemAudioVolume=" "
+ 
+diff --git a/bootstrap.sh b/bootstrap.sh
+index 652b8e9..72718db 100644
+--- a/bootstrap.sh
++++ b/bootstrap.sh
+@@ -1,43 +1,4 @@
+ #!/usr/bin/env bash
+-
+-# turn on "strict mode"
+-set -euo pipefail
+-
+-dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
+-setup_dir="$dotfiles_dir/setup"
+-
+-source "$dotfiles_dir/dotfiles-support"
+-
+-confirm_bootstrap() {
+-  display_message "Are you sure you want to continue bootstrapping dotfiles?"
+-  read -n 1 -p "[y/n]> " install && echo
+-  input_matches_yY "$install"
+-}
+-
+-symlink_dotfiles() {
+-  display_message "Symlinking dotfiles..."
+-  bash "$setup_dir/symlinks.sh"
+-  display_message "...done symlinking"
+-}
+-
+-install_software() {
+-  display_message "Running installers..."
+-  bash "$setup_dir/install-all.sh"
+-  display_message "...done with installers"
+-}
+-
+-bootstrap() {
+-  display_message "Bootstrapping dotfiles..."
+-  symlink_dotfiles
+-  install_software
+-  display_message "...done bootstrapping"
+-}
+-
+-if confirm_bootstrap; then
+-  bootstrap
+-else
+-  display_message "Aborting bootstrap"
+-fi
+-
+-# Install vim plugins
+-vim +PlugInstall
++sh .macos
++sh brew.sh
++sh symlinks.sh
+diff --git a/brew.sh b/brew.sh
+new file mode 100644
+index 0000000..60ca221
+--- /dev/null
++++ b/brew.sh
+@@ -0,0 +1,33 @@
++#!/usr/bin/env bash
++
++##########################################
++# NOTE: This is only intended for Mac OS #
++##########################################
++
++# Run `sh brew.sh` to run script
++# To learn more about brew, check out https://github.com/Homebrew/homebrew-bundle
++# Install xcode command line tools if it is not
++command -v xcode-select >/dev/null 2>&1 || { echo >&2 "Installing Xcode Command Line Tools Now"; \
++xcode-select --install; }
++
++# Check to see if Homebrew is installed, and install it if it is not
++command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
++/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
++
++# Make sure we’re using the latest Homebrew.
++brew update
++
++# Upgrade any already-installed formulae.
++brew upgrade
++
++# Install or upgrade apps in Brewfile
++brew bundle
++
++# Save Homebrew’s installed location.
++BREW_PREFIX=$(brew --prefix)
++
++# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
++ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
++
++mas install 1176895641 # Install Spark application used for emails
++pip3 install jupyter # Install Jupyter for Python
+diff --git a/dotfiles-support b/dotfiles-support
+deleted file mode 100644
+index 8e621ca..0000000
+--- a/dotfiles-support
++++ /dev/null
+@@ -1,9 +0,0 @@
+-#!/usr/bin/env bash
+-
+-display_message() {
+-  printf '%s\n' "$1"
+-}
+-
+-input_matches_yY() {
+-  [[ "$1" =~ ^(y|Y) ]]
+-}
+diff --git a/setup/install-all.sh b/setup/install-all.sh
+deleted file mode 100644
+index 022e0a0..0000000
+--- a/setup/install-all.sh
++++ /dev/null
+@@ -1,31 +0,0 @@
+-#! /usr/bin/env bash
+-set -euo pipefail
+-
+-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+-source "$(dirname "$DIR")/dotfiles-support"
+-
+-find_install_scripts() {
+-  # find "$DIR"/installers -maxdepth 1 -type f -perm -u=x
+-  for file in "$DIR"/installers/*.sh ; do
+-    [[ -x "$file" ]] || continue
+-    echo "$file"
+-  done
+-}
+-
+-execute_installer() {
+-  display_message "Execute ${1##*setup/}?"
+-  read -n 1 -p "[y/n]> " install && echo
+-  if input_matches_yY "$install" ; then
+-    "$1"
+-  else
+-    display_message "Skipping ${1##*setup/}"
+-  fi
+-}
+-
+-execute_installers() {
+-  for file in $( find_install_scripts ) ; do
+-    execute_installer "$file"
+-  done
+-}
+-
+-execute_installers
+diff --git a/setup/install/install-brew.sh b/setup/install/install-brew.sh
+deleted file mode 100644
+index 5a091be..0000000
+--- a/setup/install/install-brew.sh
++++ /dev/null
+@@ -1,46 +0,0 @@
+-#!/usr/bin/env bash
+-
+-##########################################
+-# NOTE: This is only intended for Mac OS #
+-##########################################
+-
+-set -euo pipefail
+-
+-dir="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
+-setup_dir="$( dirname "$dir" )"
+-dotfiles_dir="$( dirname "$setup_dir")"
+-BREWFILE="$dotfiles_dir/Brewfile"
+-
+-source "$dotfiles_dir/dotfiles-support"
+-
+-bundle() {
+-  brew tap Homebrew/bundle
+-  brew bundle install --file="$BREWFILE"
+-}
+-
+-# To learn more about brew, check out https://github.com/Homebrew/homebrew-bundle
+-# Install xcode command line tools if it is not
+-install_xcode_tools() {
+-    command -v xcode-select >/dev/null 2>&1 || { echo >&2 "Installing Xcode Command Line Tools Now"; \
+-    xcode-select --install; }
+-}
+-
+-# Check to see if Homebrew is installed, and install it if it is not
+-install_homebrew() {
+-    command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
+-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
+-}
+-
+-install_xcode_tools
+-install_homebrew
+-# Make sure we’re using the latest Homebrew.
+-brew update
+-# Install or upgrade apps in Brewfile
+-bundle
+-
+-# Save Homebrew’s installed location.
+-BREW_PREFIX=$(brew --prefix)
+-
+-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+-ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
+-
+diff --git a/setup/symlinks.sh b/symlinks.sh
+similarity index 100%
+rename from setup/symlinks.sh
+rename to symlinks.sh
+➜  dotfiles (master) 
+➜  dotfiles (master) git reset --hard origin/master
+HEAD is now at 4a31cb7 Add jupyter setup script and settings for notebooks
+➜  dotfiles (master) c
+
+➜  dotfiles (master) vim .
+➜  dotfiles (master) gsb structure
+Switched to branch 'structure'
+➜  dotfiles (structure) vim .
+➜  dotfiles (structure) c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  dotfiles (structure) git push origin structure
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 2.19 KiB | 747.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'structure' on GitHub by visiting:
+remote:      https://github.com/jackmoody11/dotfiles/pull/new/structure
+remote: 
+To https://github.com/jackmoody11/dotfiles.git
+ * [new branch]      structure -> structure
+➜  dotfiles (structure) ~
+➜  ~ cd Documents/Interests/Programming/Python/euler/
+➜  euler (master) ls
+README.rst  euler/      venv/
+➜  euler (master) cd euler/
+➜  euler (master) ls
+__init__.py     p005.py         p010.py         p015.py         p022.py
+p001.py         p006.py         p011.py         p016.py         p022_names.txt
+p002.py         p007.py         p012.py         p017.py         p023.py
+p003.py         p008.py         p013.py         p020.py         p025.py
+p004.py         p009.py         p014.py         p021.py         scratch.py
+➜  euler (master) gd
+diff --git a/p011.py b/p011.py
+deleted file mode 100644
+index acb0246..0000000
+--- a/p011.py
++++ /dev/null
+@@ -1,28 +0,0 @@
+-twenty = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
+-49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
+-81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
+-52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91
+-22 31 16 71 51 67 63 89 41 92 36 54 22 40 40 28 66 33 13 80
+-24 47 32 60 99 03 45 02 44 75 33 53 78 36 84 20 35 17 12 50
+-32 98 81 28 64 23 67 10 26 38 40 67 59 54 70 66 18 38 64 70
+-67 26 20 68 02 62 12 20 95 63 94 39 63 08 40 91 66 49 94 21
+-24 55 58 05 66 73 99 26 97 17 78 78 96 83 14 88 34 89 63 72
+-21 36 23 09 75 00 76 44 20 45 35 14 00 61 33 97 34 31 33 95
+-78 17 53 28 22 75 31 67 15 94 03 80 04 62 16 14 09 53 56 92
+-16 39 05 42 96 35 31 47 55 58 88 24 00 17 54 24 36 29 85 57
+-86 56 00 48 35 71 89 07 05 44 44 37 44 60 21 58 51 54 17 58
+-19 80 81 68 05 94 47 69 28 73 92 13 86 52 17 77 04 89 55 40
+-04 52 08 83 97 35 99 16 07 97 57 32 16 26 26 79 33 27 98 66
+-88 36 68 87 57 62 20 72 03 46 33 67 46 55 12 32 63 93 53 69
+-04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36
+-20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
+-20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
+-01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"""
+-
+-# Turn string above to 400 element list
+-twenty = list(map(int, twenty.split()))
+-
+-# Turn string of 400 elements to 20 by 20 matrix
+-twenty = [twenty[0 + 20 * i: 20 * (i + 1)] for i in range(20)]
+-
+-print(twenty)
+➜  euler (master) 
+➜  euler (master) c
+
+➜  euler (master) ls
+__init__.py     p005.py         p010.py         p015.py         p022.py
+p001.py         p006.py         p011.py         p016.py         p022_names.txt
+p002.py         p007.py         p012.py         p017.py         p023.py
+p003.py         p008.py         p013.py         p020.py         p025.py
+p004.py         p009.py         p014.py         p021.py         scratch.py
+➜  euler (master) gacp "Start work on #11"
+[master 09a61be] Start work on #11
+ 3 files changed, 81 insertions(+)
+ create mode 100644 euler/p011.py
+ create mode 100644 euler/p023.py
+ create mode 100644 euler/scratch.py
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.36 KiB | 697.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/jackmoody11/project-euler-solutions.git
+   f5174a2..09a61be  master -> master
+➜  euler (master) c
+
+
+
+
+
+
+➜  euler (master) ls
+__init__.py     p005.py         p010.py         p015.py         p022.py
+p001.py         p006.py         p011.py         p016.py         p022_names.txt
+p002.py         p007.py         p012.py         p017.py         p023.py
+p003.py         p008.py         p013.py         p020.py         p025.py
+p004.py         p009.py         p014.py         p021.py         scratch.py
+➜  euler (master) c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  euler (master) ~
+➜  ~ vim dotfiles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  1 # Add `code` keyword to Terminal
+  2 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  3 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+  4 export PATH="$PATH:$HOME/.rvm/bin"
+  5 
+  6 # If you ever need to remove Last Login message
+  7 # Use `touch .hushlogin` in root directory
+  8 
+  9 ######################################################
+ 10 #################### Color Scheme ####################
+ 11 ######################################################
+ 12 
+ 13 # Turn on CLI colors
+ 14 export CLICOLOR=1
+ 15 
+ 16 # Colors
+ 17 black="\[$(tput setaf 0)\]"
+ 18 red="\[$(tput setaf 1)\]"
+ 19 green="\[$(tput setaf 2)\]"
+ 20 yellow="\[$(tput setaf 3)\]"
+ 21 blue="\[$(tput setaf 4)\]"
+ 22 magenta="\[$(tput setaf 5)\]"
+ 23 cyan="\[$(tput setaf 6)\]"
+ 24 white="\[$(tput setaf 7)\]"
+ 25 
+ 26 # Title bar - "user: ~"
+ NORMAL  ~/dotfiles/.bashrc                        sh  utf-8[unix]    2% ☰    1/43 ㏑ :  1 
+"~/dotfiles/.bashrc" 43L, 1213C

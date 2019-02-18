@@ -33,3 +33,6 @@ inoremap jj <ESC>
 " For quickly escaping visual mode
 xnoremap jk <ESC>
 xnoremap kj <ESC>
+
+""" Autocmd
+autocmd BufEnter * silent! lcd %:p:h " automatically cd into current buffer
