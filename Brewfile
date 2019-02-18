@@ -93,3 +93,4 @@ cask "visual-studio-code" # Install VS Code
 cask "whatsapp" # Install Whatsapp
 brew "mas" # Make installing apps from the App Store easier
 # https://github.com/mas-cli/mas
+cask "alfred"
