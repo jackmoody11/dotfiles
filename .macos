@@ -43,7 +43,7 @@ mas install 1176895641 # Install Spark application used for emails
 pip3 install jupyter # Install Jupyter for Python
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=%00
 
 # Set highlight color to blue
 defaults write NSGlobalDomain AppleHighlightColor -string "0.705900 0.847100 0.992200"
