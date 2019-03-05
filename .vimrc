@@ -43,10 +43,11 @@ set textwidth=80 " make it obvious where 80 characters is
 
 """ Mappings
 " Insert mode
+" insert -> visual mode
 inoremap jj <ESC>
 
 " Visual mode
-" For quickly escaping visual mode
+" visual -> normal mode
 xnoremap jk <ESC>
 xnoremap kj <ESC>
 
@@ -58,14 +59,16 @@ autocmd BufEnter * silent! lcd %:p:h " automatically cd into current buffer
 """ NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeDirArrows = 1
-" Start NERDTree automatically on vim startup
-autocmd vimenter * NERDTree
-" Ctrl + n shows NERDTree
-map <C-n> :NERDTreeToggle<CR>
-" Close vim if only window is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Change into directory when entering
 let g:NERDTreeChDirMode = 2
+
+" Start NERDTree automatically on vim startup
+autocmd vimenter * NERDTree
+" Close vim if only window is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Ctrl + n toggles NERDTree
+map <C-n> :NERDTreeToggle<CR>
 " Map r to change pwd
 map <leader>r :NERDTreeFind<cr>
 
