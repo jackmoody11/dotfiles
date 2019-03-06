@@ -39,8 +39,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ######### General Preferences ##########
 ########################################
 
+mas install 1176895641 # Install Spark application used for emails
+pip3 install jupyter # Install Jupyter for Python
+
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=%00
 
 # Set highlight color to blue
 defaults write NSGlobalDomain AppleHighlightColor -string "0.705900 0.847100 0.992200"
@@ -101,8 +104,8 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 ########################################
 
 # Source: https://www.lifewire.com/add-login-message-os-x-using-terminal-2260758
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText
-"Welcome back, Jack."
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Welcome back, Jack."
+
 
 
 ########################################

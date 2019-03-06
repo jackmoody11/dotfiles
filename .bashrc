@@ -12,7 +12,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Turn on CLI colors
 export CLICOLOR=1
-
+export TERM=xterm-256color
 # Colors
 black="\[$(tput setaf 0)\]"
 red="\[$(tput setaf 1)\]"
