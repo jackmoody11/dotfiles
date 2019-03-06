@@ -26,10 +26,25 @@ install_software() {
   display_message "...done with installers"
 }
 
+install_plugins(){
+    display_message "Installing vim plugins..."
+    vim +PlugInstall +qall
+    display_message "...done with plugins"
+}
+
+set_mac_defaults(){
+    display_message "Setting mac preferences"
+    sh .macos
+    display_message "...done with preferences"
+    display_message "You may need to restart your machine for all changes to take place."
+}
+
 bootstrap() {
   display_message "Bootstrapping dotfiles..."
   symlink_dotfiles
   install_software
+  install_plugins
+  set_mac_defaults
   display_message "...done bootstrapping"
 }
 
@@ -38,9 +53,3 @@ if confirm_bootstrap; then
 else
   display_message "Aborting bootstrap"
 fi
-
-# Install vim plugins
-vim +PlugInstall
-sh .macos
-sh brew.sh
-sh symlinks.sh
