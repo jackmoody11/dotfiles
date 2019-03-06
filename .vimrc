@@ -58,7 +58,8 @@ autocmd BufEnter * silent! lcd %:p:h " automatically cd into current buffer
 
 """ NERDTree
 let NERDTreeShowHidden=1
-let NERDTreeDirArrows = 1
+let NERDTreeDirArrows=0
+let NERDTreeMinimalUI=0
 " Change into directory when entering
 let g:NERDTreeChDirMode = 2
 
