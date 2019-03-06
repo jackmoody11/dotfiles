@@ -89,9 +89,6 @@ defaults write NSGlobalDomain AppleMetricUnits -bool false
 # Hide language menu from the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool false
 
-# Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "America/New_York" > /dev/null
-
 ############## Dashboard ###############
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
