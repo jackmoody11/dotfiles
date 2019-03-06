@@ -104,8 +104,8 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 ########################################
 
 # Source: https://www.lifewire.com/add-login-message-os-x-using-terminal-2260758
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText
-"Welcome back, Jack."
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Welcome back, Jack."
+
 
 
 ########################################
