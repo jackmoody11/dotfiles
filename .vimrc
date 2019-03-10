@@ -14,6 +14,11 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'wikitopian/hardmode'
+Plug 'raimondi/delimitmate'
+Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
