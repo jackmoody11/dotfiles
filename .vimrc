@@ -14,6 +14,11 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'wikitopian/hardmode'
+Plug 'raimondi/delimitmate'
+Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
@@ -63,8 +68,6 @@ let NERDTreeMinimalUI=0
 " Change into directory when entering
 let g:NERDTreeChDirMode = 2
 
-" Start NERDTree automatically on vim startup
-autocmd vimenter * NERDTree
 " Close vim if only window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -76,4 +79,13 @@ map <leader>r :NERDTreeFind<cr>
 
 """ YouCompleteMe
 " Use either Enter or ctrl+y to select autocompletion
-let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+let g:ycm_key_list_stop_completion = ['<C-y>', '<Tab>']
+
+""" Hard Mode
+" No using arrow keys!!!
+let g:HardMode_level = 'wannabe'
+let g:HardMode_hardmodeMsg = 'Do not use this!'
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+""" Ctrl-p
+let g:ctrlp_show_hidden = 1

@@ -3,8 +3,8 @@
 # turn on "strict mode"
 set -euo pipefail
 
-dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
-setup_dir="$dotfiles_dir/setup"
+dotfiles_dir="$(pwd)"
+setup_dir="${dotfiles_dir}/setup"
 
 source "$dotfiles_dir/dotfiles-support"
 
@@ -34,7 +34,7 @@ install_plugins(){
 
 set_mac_defaults(){
     display_message "Setting mac preferences"
-    sh .macos
+    bash .macos
     display_message "...done with preferences"
     display_message "You may need to restart your machine for all changes to take place."
 }
