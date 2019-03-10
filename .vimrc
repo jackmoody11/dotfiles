@@ -79,4 +79,13 @@ map <leader>r :NERDTreeFind<cr>
 
 """ YouCompleteMe
 " Use either Enter or ctrl+y to select autocompletion
-let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+let g:ycm_key_list_stop_completion = ['<C-y>', '<Tab>']
+
+""" Hard Mode
+" No using arrow keys!!!
+let g:HardMode_level = 'wannabe'
+let g:HardMode_hardmodeMsg = 'Do not use this!'
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+""" Ctrl-p
+let g:ctrlp_show_hidden = 1
