@@ -24,8 +24,10 @@ alias gap="git add --patch"
 alias gc="git commit -m"
 alias gp="git push"
 alias gd="git diff"
+alias gdc="git diff --cached" # show added but uncommited changes
 alias gs="git status"
 alias gb="git branch"
+alias gdb="git branch -d"
 alias gsb="git checkout" # stands for git switch branch
 
 # For going up multiple directories
