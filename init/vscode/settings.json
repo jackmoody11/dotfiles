@@ -44,5 +44,6 @@
         "*.sublime-settings": "json"
     },
     "workbench.startupEditor": "newUntitledFile",
-    "python.linting.enabled": false
+    "python.linting.enabled": false,
+    "python.dataScience.sendSelectionToInteractiveWindow": true
 }
