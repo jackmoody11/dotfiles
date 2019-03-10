@@ -68,8 +68,6 @@ let NERDTreeMinimalUI=0
 " Change into directory when entering
 let g:NERDTreeChDirMode = 2
 
-" Start NERDTree automatically on vim startup
-autocmd vimenter * NERDTree
 " Close vim if only window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
