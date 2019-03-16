@@ -26,9 +26,12 @@ tap "mas-cli/tap", pin: true
 ############# Development ##############
 ########################################
 
+brew "autoenv"
 brew "automake" # Add make command for GNU compliant Makefiles
 brew "bash" # Bash 4
 brew "git" # Add git
+brew "git-extras" # Add extra git commands
+brew "gmp"
 brew "libyaml" # YAML parser
 brew "mysql" # Add MySQL
 brew "node" # Add node.js
