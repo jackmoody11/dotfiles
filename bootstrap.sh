@@ -34,7 +34,7 @@ install_plugins(){
 
 set_mac_defaults(){
     display_message "Setting mac preferences"
-    bash .macos
+    bash "$setup_dir/mac/.macos"
     display_message "...done with preferences"
     display_message "You may need to restart your machine for all changes to take place."
 }

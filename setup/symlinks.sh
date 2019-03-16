@@ -3,7 +3,7 @@
 ########################################
 
 ln -sF ~/dotfiles/.vim ~/.vim
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/setup/vim/.vimrc ~/.vimrc
 
 ########################################
 ############ Sublime Text ##############
@@ -27,16 +27,16 @@ ln -sF ~/dotfiles/init/vscode/snippets ~/Library/Application\ Support/Code/User/
 ########################################
 
 # Add .inputrc symlink
-ln -sf ~/dotfiles/.inputrc ~/.inputrc
+ln -sf ~/dotfiles/setup/bash/.inputrc ~/.inputrc
 
 # Add .hushlogin
-ln -sf ~/dotfiles/.hushlogin ~/.hushlogin
+ln -sf ~/dotfiles/setup/mac/.hushlogin ~/.hushlogin
 
 # Add .bash_profile
-ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
+ln -sf ~/dotfiles/setup/bash/.bash_profile ~/.bash_profile
 
 # Add .bashrc
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/setup/bash/.bashrc ~/.bashrc
 
 # Add .jupyter/
 ln -sF ~/dotfiles/.jupyter ~/.jupyter
