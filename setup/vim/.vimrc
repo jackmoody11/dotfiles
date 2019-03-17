@@ -79,7 +79,7 @@ map <leader>r :NERDTreeFind<cr>
 
 """ YouCompleteMe
 " Use either Enter or ctrl+y to select autocompletion
-let g:ycm_key_list_stop_completion = ['<C-y>', '<Tab>']
+let g:ycm_key_list_stop_completion = ['<C-y>']
 
 """ Hard Mode
 " No using arrow keys!!!
