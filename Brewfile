@@ -41,6 +41,7 @@ brew "php" # Add PHP
 brew "pre-commit" # Run commands before committing changes made in git repository
 brew "python" # Add Python
 brew "postgresql" # Add Postgresql
+brew "shfmt" # Shell formatting for VS Code
 brew "sphinx-doc" # Enable Sphinx documentation for Python projects
 brew "sqlite" # Add SQLite
 brew "redis" # Add redis
