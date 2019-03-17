@@ -14,6 +14,7 @@ alias reload='. ~/.bashrc >/dev/null && echo "reloaded"'
 alias ls='ls -F'
 alias ls.='ls -Fd .*' # Show dotfiles and hide others
 alias ll='ls -aoFh' # Show all files and directories with sizes
+alias lsa='ls -a' # show all files and directories
 alias ~="cd ~" # Make it easier to go to root
 alias dot="cd ~/dotfiles"
 
