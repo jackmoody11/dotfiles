@@ -14,37 +14,48 @@ confirm_bootstrap() {
   input_matches_yY "$install"
 }
 
+confirm_brew() {
+  display_message "Do you need to install homebrew and brewfiles?"
+  read -n 1 -p "[y/n]> " install && echo
+  input_matches_yY "$install"
+}
+
 symlink_dotfiles() {
   display_message "Symlinking dotfiles..."
   bash "$setup_dir/symlinks.sh"
   display_message "...done symlinking"
 }
 
-install_software() {
-  display_message "Running installers..."
-  bash "$setup_dir/install-all.sh"
-  display_message "...done with installers"
+install_plugins() {
+  display_message "Installing vim plugins..."
+  vim +PlugInstall +qall
+  display_message "...done with plugins"
 }
 
-install_plugins(){
-    display_message "Installing vim plugins..."
-    vim +PlugInstall +qall
-    display_message "...done with plugins"
+install_brew(){
+  display_message "Setting up Homebrew"
+  bash "$setup_dir/mac/install-brew.sh"
+  display_message "...done with Homebrew"
 }
 
-set_mac_defaults(){
+setup_mac() {
+  # Only set mac defaults if on a mac computer
+  if [ "$(uname -s)" == "Darwin" ]; then
     display_message "Setting mac preferences"
     bash "$setup_dir/mac/.macos"
     display_message "...done with preferences"
+    if confirm_brew; then
+      install_brew
+    fi
     display_message "You may need to restart your machine for all changes to take place."
+  fi
 }
 
 bootstrap() {
   display_message "Bootstrapping dotfiles..."
   symlink_dotfiles
-  install_software
   install_plugins
-  set_mac_defaults
+  setup_mac
   display_message "...done bootstrapping"
 }
 
