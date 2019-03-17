@@ -26,7 +26,7 @@ ln -sF ~/dotfiles/init/vscode/snippets ~/Library/Application\ Support/Code/User/
 ############### General ################
 ########################################
 
-# Add .inputrc symlink
+# Add .inputrc
 ln -sf ~/dotfiles/setup/bash/.inputrc ~/.inputrc
 
 # Add .hushlogin
