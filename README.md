@@ -29,3 +29,8 @@ Below is a list of the plugins I currently use (these can be located in
 | DelimitMate | [raimondi/delimitmate](https://github.com/raimondi/delimitmate)| Change surrounding quotations/tags easier |
 | surround.vim | [tpope/vim-surround](https://github.com/tpope/vim-surround) | Automatically close brackets, parentheses, etc. |
 | ctrlp.vim | [kien/ctrlp.vim](https://github.com/kien/ctrlp.vim) | Better way to find files/directories |
+
+
+Credits
+-------
+I owe a lot to the work done by [Ben Knoble](https://github.com/benknoble) and his [dotfiles](https://github.com/benknoble/Dotfiles).
