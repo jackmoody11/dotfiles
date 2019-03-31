@@ -1,6 +1,6 @@
 " Install vim-plug if it isn't already
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+if empty(glob('~/dotfiles/links/vim/autoload/plug.vim'))
+  silent !curl -fLo ~/dotfiles/links/vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
@@ -8,11 +8,22 @@ endif
 
 """ Plugins
 " Install Plugins with `:PlugInstall`
-call plug#begin('~/dotfiles/.vim/plugged')
+call plug#begin('~/dotfiles/links/vim/plugged')
+
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
-Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme', { 'do': function('BuildYCM') }
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'wikitopian/hardmode'
@@ -43,7 +54,9 @@ set backspace=indent,eol,start
 set history=10000
 " Update faster
 set updatetime=250
-set textwidth=80 " make it obvious where 80 characters is
+set textwidth=0
+set wrap
+set linebreak
 
 
 """ Mappings
@@ -70,6 +83,10 @@ let g:NERDTreeChDirMode = 2
 
 " Close vim if only window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Get rid of netrw message at top of directories
+let g:netrw_list_hide = '^\./$'
+let g:netrw_hide = 1
 
 " Ctrl + n toggles NERDTree
 map <C-n> :NERDTreeToggle<CR>

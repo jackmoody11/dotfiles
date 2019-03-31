@@ -2,8 +2,8 @@
 *.DS_Store
 
 # Vim
-.vim/plugged/
-bundle/
+**/vim/plugged/
+**/vim/bundle/
 *.swp
 *.netrwhist
 

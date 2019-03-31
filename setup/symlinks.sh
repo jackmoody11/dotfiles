@@ -1,42 +1,79 @@
-########################################
-################# Vim ##################
-########################################
+#!/usr/bin/env bash
+setup_dir="$(pwd)"
+dotfiles_dir="$(dirname "$setup_dir")"
+support="$setup_dir/support"
+backup="${dotfiles_dir}_old"
 
-ln -sF ~/dotfiles/.vim ~/.vim
-ln -sf ~/dotfiles/setup/vim/.vimrc ~/.vimrc
+source "$support"
+# Set symlinks for files and folders
+declare -A files=(
+  [bash]=.bash
+  [bash_profile]=.bash_profile
+  [bashrc]=.bashrc
+  [hushlogin]=.hushlogin
+  [jupyter]=.jupyter
+  [tmux.conf]=.tmux.conf
+  [vim]=.vim
+)
 
-########################################
-############ Sublime Text ##############
-########################################
+create_backup_dir() {
+  display_message "Creating $backup for backup of any existing files in $HOME..."
+  mkdir -p "$backup"
+  display_message "...done"
+}
 
-# Install Sublime Text settings (force overwrite if they exist)
-ln -sF ~/dotfiles/init/st3/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-ln -sF ~/dotfiles/init/st3/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+clean_backup_dir() {
+  display_message "Cleaning out $backup to hold fresh backups..."
+  find "$backup" -not -path "$backup" -delete
+  display_message "...done"
+}
 
+verify_directory() {
+  display_message "Checking for the $dotfiles_dir directory..."
+  if [[ "$(pwd)" == "$dotfiles_dir" ]]; then
+    display_message "...Found $dotfiles_dir directory"
+    true
+  else
+    display_message "...Failed to find $dotfiles_dir"
+    false
+  fi
+}
 
-########################################
-############### VS Code ################
-########################################
-# Reference: https://pawelgrzybek.com/sync-vscode-settings-and-snippets-via-dotfiles-on-github/
-# Create symlinks to settings
-ln -sf ~/dotfiles/init/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json 
-ln -sF ~/dotfiles/init/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
+backup_file() {
+  if [[ -e ~/"${files[$1]}" || -h ~/"${files[$1]}" ]]; then
+    mv ~/"${files[$1]}" "$backup"/"${files[$1]}"
+  fi
+}
 
-########################################
-############### General ################
-########################################
+symlink_file() {
+  ln -s "$dotfiles_dir"/links/"$1" ~/"${files[$1]}"
+}
 
-# Add .inputrc
-ln -sf ~/dotfiles/setup/bash/.inputrc ~/.inputrc
+# handle the file by moving it to backup and symlinking
+# args: 1: dotfile key (that is, the name it has in this repo)
+handle_file() {
+  display_message "Starting ${files[$1]}..."
+  display_message "Moving ${files[$1]} from $HOME to $backup"
+  backup_file "$1"
+  display_message "Creating symlink to ${files[$1]} in $HOME"
+  symlink_file "$1"
+  display_message "...Finished ${files[$1]}"
+}
 
-# Add .hushlogin
-ln -sf ~/dotfiles/setup/mac/.hushlogin ~/.hushlogin
+handle_files() {
+  for file in "${!files[@]}"; do
+    handle_file "$file"
+    sleep 1
+  done
+}
 
-# Add .bash_profile
-ln -sf ~/dotfiles/setup/bash/.bash_profile ~/.bash_profile
+makesymlinks() {
+  if ! verify_directory ; then
+    exit
+  fi
+  create_backup_dir
+  clean_backup_dir
+  handle_files
+}
 
-# Add .bashrc
-ln -sf ~/dotfiles/setup/bash/.bashrc ~/.bashrc
-
-# Add .jupyter/
-ln -sF ~/dotfiles/.jupyter ~/.jupyter
+makesymlinks

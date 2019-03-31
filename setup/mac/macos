@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+theme="~/dotfiles/setup/mac/Dracula.terminal"
+filename=$(basename -- "$theme")
+extension="${filename##*.}"
+theme_name="${filename%.*}"
 ### To see what a certain preference is called, do the following in the command line:
 # `defaults read > before`
 # Make whatever changes to settings you want to automate
@@ -171,13 +175,13 @@ tell application "Terminal"
     local allOpenedWindows
     local initialOpenedWindows
     local windowID
-    set themeName to "Dracula"
+    set themeName to "$theme_name"
     (* Store the IDs of all the open terminal windows. *)
     set initialOpenedWindows to id of every window
     (* Open the custom theme so that it gets added to the list
        of available terminal themes (note: this will open two
        additional terminal windows). *)
-    do shell script "open '$HOME/dotfiles/setup/mac/" & themeName & ".terminal'"
+    do shell script "open '$theme'"
     (* Wait a little bit to ensure that the custom theme is added. *)
     delay 1
     (* Set the custom theme as the default terminal theme. *)
@@ -233,14 +237,3 @@ defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -boo
 # Disable the all too sensitive backswipe on Magic Mouse
 defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
-
-########################################
-############ Sublime Text ##############
-########################################
-
-# Install Package Manager and move to proper download location
-echo "Installing Sublime Text 3 Package Manager"
-curl "https://packagecontrol.io/Package%20Control.sublime-package" --output "Package Control.sublime-package"
-mv "Package Control.sublime-package" ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
-# Go back to root
-cd ~
