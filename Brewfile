@@ -31,6 +31,7 @@ brew "automake" # Add make command for GNU compliant Makefiles
 brew "git" # Add git
 brew "git-extras" # Add extra git commands
 brew "gmp"
+brew "hub" # Add GitHub shortcuts
 brew "libyaml" # YAML parser
 brew "mysql" # Add MySQL
 brew "node" # Add node.js
