@@ -1,3 +1,6 @@
+" Load bash aliases in vim
+let $BASH_ENV = "~/.bash/aliases"
+
 " Install vim-plug if it isn't already
 if empty(glob('~/dotfiles/links/vim/autoload/plug.vim'))
   silent !curl -fLo ~/dotfiles/links/vim/autoload/plug.vim --create-dirs
