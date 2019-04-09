@@ -7,7 +7,6 @@ shopt -s expand_aliases
 #################### Aliases ####################
 #################################################
 
-alias c='clear'
 alias tree="tree -C" # Colorize tree
 
 # reload profile
@@ -20,6 +19,7 @@ alias ll='ls -aoFh' # Show all files and directories with sizes
 alias lsa='ls -a' # show all files and directories
 alias ~="cd ~" # Make it easier to go to root
 alias dot="cd ~/dotfiles"
+alias vdot="vim ~/dotfiles"
 
 # Git
 alias g="git"
