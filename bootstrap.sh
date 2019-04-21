@@ -36,8 +36,7 @@ install_plugins() {
 
 install_ycm() {
   display_message "Installing YouCompleteMe..."
-  cd ~/dotfiles/links/vim/plugged/YouCompleteMe
-  ./install.py
+  ~/dotfiles/links/vim/plugged/YouCompleteMe/install.py
   display_message "...done with YCM"
 }
 
