@@ -33,6 +33,7 @@ alias gs="git status"
 alias gb="git branch"
 alias gdb="git branch -d"
 alias gsb="git checkout" # stands for git switch branch
+alias gwc="git whatchanged"
 
 # For going up multiple directories
 alias cd..='cd ..' # For mistyping
