@@ -26,7 +26,6 @@ endfunction
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
-Plug 'valloric/youcompleteme', { 'do': function('BuildYCM') }
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'wikitopian/hardmode'
