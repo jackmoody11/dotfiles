@@ -37,6 +37,7 @@ brew "libyaml" # YAML parser
 brew "mysql" # Add MySQL
 brew "node" # Add node.js
 brew "openssl" # Add TLS and SSL protocols
+brew "pandoc"
 brew "perl" # Add Perl
 brew "php" # Add PHP
 brew "pre-commit" # Run commands before committing changes made in git repository
