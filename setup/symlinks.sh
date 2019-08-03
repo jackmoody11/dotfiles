@@ -14,6 +14,7 @@ declare -A files=(
   [jupyter]=.jupyter
   [tmux.conf]=.tmux.conf
   [vim]=.vim
+  [hyper.js]=.hyper.js
 )
 
 create_backup_dir() {

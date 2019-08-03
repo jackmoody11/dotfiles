@@ -34,12 +34,6 @@ install_plugins() {
   display_message "...done with plugins"
 }
 
-install_ycm() {
-  display_message "Installing YouCompleteMe..."
-  ~/dotfiles/links/vim/plugged/YouCompleteMe/install.py
-  display_message "...done with YCM"
-}
-
 install_brew(){
   display_message "Setting up Homebrew"
   bash "$setup_dir/mac/install-brew.sh"
@@ -63,7 +57,6 @@ bootstrap() {
   display_message "Bootstrapping dotfiles..."
   symlink_dotfiles
   install_plugins
-  install_ycm
   setup_mac
   display_message "...done bootstrapping"
 }

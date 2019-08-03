@@ -28,6 +28,7 @@ tap "mas-cli/tap", pin: true
 
 brew "autoenv"
 brew "automake" # Add make command for GNU compliant Makefiles
+brew "enchant" # Add spell checking
 brew "git" # Add git
 brew "git-extras" # Add extra git commands
 brew "gmp"
@@ -100,3 +101,4 @@ cask "whatsapp" # Install Whatsapp
 brew "mas" # Make installing apps from the App Store easier
 # https://github.com/mas-cli/mas
 cask "alfred"
+cask "hyper" # Install Hyper
