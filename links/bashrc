@@ -27,14 +27,14 @@ white="\[$(tput setaf 7)\]"
 title="\u: \w"
 titlebar="\[\033]0;"$title"\007\]"
 
-# Blinking bar
+# Blinking cursor
 blink="\[\033[5 q\]"
 
 # Clear attributes
 clear_attributes="\[$(tput sgr0)\]"
 
 # Custom bash prompt - "➜  ~ (master) "
-export PS1="${titlebar}${green}➜  ${blue}\W ${cyan}\$(git_branch)${clear_attributes}${blink}"
+export PS1="${titlebar}${green}➜  ${magenta}\W ${cyan}\$(git_branch)${clear_attributes}${blink}"
 
 ########################################
 ################ Shopt #################
