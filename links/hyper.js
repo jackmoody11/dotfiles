@@ -44,7 +44,8 @@ module.exports = {
     // terminal background color
     // opacity is only supported on macOS
     backgroundColor: '#000',
-
+    
+    accentColor: '#64FFDA',
     // terminal selection color
     selectionColor: 'rgba(248,28,229,0.3)',
 
@@ -52,7 +53,7 @@ module.exports = {
     borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: '',
+    css: `.tabs_title{ font-family: 'SF Mono' }`,
 
     // custom CSS to embed in the terminal window
     termCSS: '',
@@ -93,16 +94,6 @@ module.exports = {
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
-    //
-    // Windows
-    // - Make sure to use a full path if the binary name doesn't work
-    // - Remove `--login` in shellArgs
-    //
-    // Bash on Windows
-    // - Example: `C:\\Windows\\System32\\bash.exe`
-    //
-    // PowerShell on Windows
-    // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
     shell: '',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
@@ -113,7 +104,7 @@ module.exports = {
     env: {},
 
     // set to `false` for no bell
-    bell: 'SOUND',
+    bell: false,
 
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
     copyOnSelect: false,
@@ -146,7 +137,10 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-dracula"],
+  plugins: [// 'hyper-transparent'
+               'hyper-dracula', 
+	       // 'hyperline#0.6.1'
+           ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
