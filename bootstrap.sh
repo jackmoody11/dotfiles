@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/local/bin/bash
 
 # turn on "strict mode"
 set -euo pipefail
@@ -22,6 +22,12 @@ confirm_brew() {
   input_matches_yY "$install"
 }
 
+confirm_jupyter() {
+  display_message "Do you need to add jupyter extensions?"
+  read -n 1 -p "[y/n]> " install && echo
+  input_matches_yY "$install"
+}
+
 symlink_dotfiles() {
   display_message "Symlinking dotfiles..."
   bash "$setup_dir/symlinks.sh"
@@ -40,15 +46,23 @@ install_brew(){
   display_message "...done with Homebrew"
 }
 
+setup_jupyter(){
+  if confirm_jupyter; then
+  display_message "Setting up Jupyter extensions..."
+    bash "${setup_dir}/jupyter/jupyter.sh"
+    display_message "...done with Jupyter"
+  fi
+}
+
 setup_mac() {
   # Only set mac defaults if on a mac computer
   if [ "$(uname -s)" == "Darwin" ]; then
-    display_message "Setting mac preferences"
-    bash "$setup_dir/mac/macos"
-    display_message "...done with preferences"
     if confirm_brew; then
       install_brew
     fi
+    display_message "Setting mac preferences"
+    bash "$setup_dir/mac/macos"
+    display_message "...done with preferences"
     display_message "You may need to restart your machine for all changes to take place."
   fi
 }
@@ -58,6 +72,7 @@ bootstrap() {
   symlink_dotfiles
   install_plugins
   setup_mac
+  setup_jupyter
   display_message "...done bootstrapping"
 }
 
