@@ -11,7 +11,7 @@ setup_dir="$( dirname "$dir" )"
 dotfiles_dir="$( dirname "$setup_dir")"
 BREWFILE="$dotfiles_dir/Brewfile"
 
-source "$dotfiles_dir/dotfiles-support"
+source "$setup_dir/support"
 
 bundle() {
   brew tap Homebrew/bundle
