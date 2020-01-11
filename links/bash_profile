@@ -5,6 +5,9 @@ INPUTRC="~/dotfiles/links/bash/inputrc"
 # Must import functions before bashrc
 source ~/dotfiles/links/bashrc
 
+# Add pyenv to start
+eval "$(pyenv init -)"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Setting PATH for Python 3.7
