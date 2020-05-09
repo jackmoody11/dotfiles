@@ -6,6 +6,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Print current working directory
-        run: ls && pwd
+        run: pwd
+      - name: List files/folders in directory
+        run: ls
       - name: Run bootstrap.sh
         run: ./bootstrap.sh
