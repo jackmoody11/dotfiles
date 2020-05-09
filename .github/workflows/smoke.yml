@@ -2,10 +2,17 @@ name: Smoke Test
 on: [push]
 
 jobs:
-  build:
-    runs-on: macos-latest
+  build-macOS-latest:
+    runs-on: macOS-latest
     steps:
-      - name: Print directory contents above
-        run: ls ../dotfiles
+      - uses: actions/checkout@v1
       - name: Run bootstrap.sh
-        run: ../bootstrap.sh
+        run: |
+          ./bootstrap.sh
+  build-ubuntu-latest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run bootstrap.sh
+        run: |
+          ./bootstrap.sh
