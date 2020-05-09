@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 ##########################################
 # NOTE: This is only intended for Mac OS #

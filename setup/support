@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 display_message() {
   printf '%s\n' "$1"

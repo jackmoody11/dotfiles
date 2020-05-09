@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 setup_dir="$(pwd)"
 dotfiles_dir="$(dirname "$setup_dir")"
 support="$setup_dir/support"
@@ -50,7 +50,7 @@ symlink_file() {
   # If symlink links to directory, only create it if it doesn't already exist
   if [[ -L "$dotfiles_dir"/links/"$1" ]]; then
     ln -s "$dotfiles_dir"/links/"$1" ~/"${files[$1]}"
-  elif [[ -d "$dotfiles_dir"/links/"$1" && ! -L ~/"${files[$1]}" ]]; then    
+  elif [[ -d "$dotfiles_dir"/links/"$1" && ! -L ~/"${files[$1]}" ]]; then
     ln -s "$dotfiles_dir"/links/"$1" ~/"${files[$1]}"
   fi
 }

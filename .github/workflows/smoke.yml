@@ -15,8 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Make bootstrap.sh executable
-        run: chmod +x ./bootstrap.sh
       - name: Run bootstrap.sh
         run: |
           ./bootstrap.sh
