@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Print current working directory
         run: pwd
-      - name: List files/folders in directory
-        run: ls
+      - name: Tree
+        run: tree
       - name: Run bootstrap.sh
         run: ./bootstrap.sh
