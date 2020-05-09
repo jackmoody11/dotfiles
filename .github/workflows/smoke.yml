@@ -5,9 +5,7 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - name: Print current working directory
-        run: pwd
-      - name: Tree
-        run: tree
+      - name: Print directory contents above
+        run: ls ..
       - name: Run bootstrap.sh
-        run: ./bootstrap.sh
+        run: ../bootstrap.sh
