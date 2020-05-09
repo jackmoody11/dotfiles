@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+#!/bin/sh
 theme="~/dotfiles/setup/mac/Dracula.terminal"
 filename=$(basename -- "$theme")
 extension="${filename##*.}"

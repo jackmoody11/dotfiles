@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/bin/sh
 
 # https://stackoverflow.com/questions/4642822/commands-executed-from-vim-are-not-recognizing-bash-command-aliases
 shopt -s expand_aliases

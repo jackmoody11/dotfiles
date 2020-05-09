@@ -41,3 +41,6 @@ export PS1="${titlebar}${green}➜  ${magenta}\W ${cyan}\$(git_branch)${clear_at
 ########################################
 
 shopt -s autocd
+
+# added by travis gem
+[ -f /Users/jacklm/.travis/travis.sh ] && source /Users/jacklm/.travis/travis.sh

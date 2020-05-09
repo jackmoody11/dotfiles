@@ -43,6 +43,7 @@ brew "perl" # Add Perl
 brew "php" # Add PHP
 brew "pre-commit" # Run commands before committing changes made in git repository
 brew "pyenv" # Add multiple Python versions if wanted
+brew "pyenv-virtualenv" # Virtual environments for pyenv
 brew "python" # Add Python
 brew "postgresql" # Add Postgresql
 brew "shfmt" # Shell formatting for VS Code
