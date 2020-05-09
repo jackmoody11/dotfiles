@@ -3,11 +3,9 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: macos-latest
-
       steps:
-        - name: Run bootstrap.sh
-          uses: actions/checkout@v2
-          run: ./bootstrap.sh
+      - name: Run bootstrap.sh
+        uses: actions/checkout@v2
+        run: ./bootstrap.sh
 
