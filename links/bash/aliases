@@ -20,6 +20,7 @@ alias lsa='ls -a' # show all files and directories
 alias ~="cd ~" # Make it easier to go to root
 alias dot="cd ~/dotfiles"
 alias vdot="vim ~/dotfiles"
+alias v="vim" # Enter vim with v
 
 # Git
 alias g="git"
