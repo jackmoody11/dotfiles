@@ -47,19 +47,15 @@ install_brew(){
 }
 
 setup_jupyter(){
-  if confirm_jupyter; then
   display_message "Setting up Jupyter extensions..."
-    bash "${setup_dir}/jupyter/jupyter.sh"
-    display_message "...done with Jupyter"
-  fi
+  bash "${setup_dir}/jupyter/jupyter.sh"
+  display_message "...done with Jupyter"
 }
 
 setup_mac() {
   # Only set mac defaults if on a mac computer
   if [ "$(uname -s)" == "Darwin" ]; then
-    if confirm_brew; then
-      install_brew
-    fi
+    install_brew
     display_message "Setting mac preferences"
     bash "$setup_dir/mac/macos"
     display_message "...done with preferences"
