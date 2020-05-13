@@ -72,8 +72,4 @@ bootstrap() {
   display_message "...done bootstrapping"
 }
 
-if confirm_bootstrap; then
-  bootstrap
-else
-  display_message "Aborting bootstrap"
-fi
+bootstrap
