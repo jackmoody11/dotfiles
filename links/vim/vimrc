@@ -32,6 +32,7 @@ Plug 'wikitopian/hardmode'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
