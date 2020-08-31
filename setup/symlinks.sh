@@ -1,10 +1,10 @@
 #!/bin/sh
-setup_dir="$(pwd)"
+setup_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 dotfiles_dir="$(dirname "$setup_dir")"
 support="$setup_dir/support"
 backup="${dotfiles_dir}_old"
 
-source "$support"
+source $support
 # Set symlinks for files and folders
 declare -A files=(
   [bash]=.bash
