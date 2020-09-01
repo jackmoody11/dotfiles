@@ -15,12 +15,11 @@ brew "coreutils"
 ################# Taps #################
 ########################################
 
-tap "caskroom/cask"
-tap "caskroom/eid"
-tap "caskroom/fonts"
-tap "caskroom/versions"
+tap "homebrew/cask"
+tap "homebrew/cask-eid"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/bundle"
-tap "mas-cli/tap", pin: true
 
 ########################################
 ############# Development ##############
@@ -35,6 +34,7 @@ brew "gmp"
 brew "howdoi" # Search for code examples from command line
 brew "hub" # Add GitHub shortcuts
 brew "libyaml" # YAML parser
+brew "mas" # CLI for Mac App Store
 brew "mysql" # Add MySQL
 brew "node" # Add node.js
 brew "openssl" # Add TLS and SSL protocols
