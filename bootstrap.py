@@ -2,25 +2,12 @@ import os
 import sys
 import platform
 
+from setup.utils import prompt
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 SETUP_DIR = os.path.join(HERE, "setup")
 SUPPORT = os.path.join(SETUP_DIR, "support")
 BACKUP = "{here}_old".format(here=HERE)
-
-
-def prompt(question):
-    """Prompt question until answer of "y" or "n" is given.
-
-    Args:
-        question (str): Question to be prompted.
-
-    Returns:
-        response (bool): Returns whether given "y" by user.
-    """
-    answer = ""
-    while answer.lower() not in ("y", "n"):
-        answer = input(question + " (y/n) ")
-    return answer == "y"
 
 
 def symlink_dotfiles():
@@ -57,10 +44,11 @@ def setup_homebrew():
 
 def setup_mac():
     """Sets mac preferences from macos file. """
-    print("Setting mac preferences...")
-    os.system("sh {setup_dir}/mac/macos".format(setup_dir=SETUP_DIR))
-    print("...done with preferences")
-    print("You may need to restart your machine for all changes to take place.")
+    if prompt("Do you need to set up your mac preferences?"):
+        print("Setting mac preferences...")
+        os.system("sh {setup_dir}/mac/macos".format(setup_dir=SETUP_DIR))
+        print("...done with preferences")
+        print("You may need to restart your machine for all changes to take place.")
 
 
 if __name__ == '__main__':
