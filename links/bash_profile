@@ -1,9 +1,9 @@
 source ~/.profile
-source ~/dotfiles/links/bash/aliases
-source ~/dotfiles/links/bash/functions
-INPUTRC="~/dotfiles/links/bash/inputrc"
+source ~/.bash/aliases
+source ~/.bash/functions
+source ~/.bash/inputrc
 # Must import functions before bashrc
-source ~/dotfiles/links/bashrc
+source ~/.bashrc
 
 # Add pyenv to start
 eval "$(pyenv init -)"

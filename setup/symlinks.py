@@ -35,8 +35,7 @@ def backup_file(file):
 
 def symlink_file(file):
     link = os.path.join(DOTFILES_DIR, "links", file)
-    os.system(f"ln -sf {link} ~/.{file}")
-    # print(f"ln -sf {link} ~/.{file}")
+    os.system(f"ln -s {link} ~/.{file}")
     print(f"{link} => ~/.{file}")
 
 
@@ -56,6 +55,7 @@ def make_symlinks(**files):
                 path = file
             else:
                 path = os.path.join(directory, file)
+                print(path)
             handle_file(path)
 
 
