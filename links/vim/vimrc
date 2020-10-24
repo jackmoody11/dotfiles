@@ -109,3 +109,6 @@ autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 """ Ctrl-p
 let g:ctrlp_show_hidden = 1
+
+" vimtex
+let g:tex_flavor = 'latex'
