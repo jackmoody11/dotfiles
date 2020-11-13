@@ -42,8 +42,9 @@ setup_os() {
     display_message "You may need to restart your machine for all changes to take place."
   elif [ "$(uname -s)" == "Linux" ]; then
     display_message "Setting up Linux..."
-    echo "First arg is $1"
     if [[ $* == *--testing* ]]; then
+      echo "Skipping apt install in testing environment"
+    else
       bash "$setup_dir/linux/apt-install.sh"
     fi
     display_message "...done with Linux"
