@@ -42,7 +42,7 @@ setup_os() {
     display_message "You may need to restart your machine for all changes to take place."
   elif [ "$(uname -s)" == "Linux" ]; then
     display_message "Setting up Linux..."
-    if [ "$2" == "--testing" ]; then
+    if [ $# -ge 1 ] && [ "$1" == "--testing" ]; then
       bash "$setup_dir/linux/apt-install.sh"
     fi
     display_message "...done with Linux"
