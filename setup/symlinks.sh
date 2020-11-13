@@ -48,12 +48,13 @@ backup_file() {
 }
 
 symlink_file() {
-  # If symlink links to directory, only create it if it doesn't already exist
-  if [[ -L "$dotfiles_dir"/links/"$1" ]]; then
-    ln -s "$dotfiles_dir"/links/"$1" ~/"${files[$1]}"
-  elif [[ -d "$dotfiles_dir"/links/"$1" && ! -L ~/"${files[$1]}" ]]; then
-    ln -s "$dotfiles_dir"/links/"$1" ~/"${files[$1]}"
+  if [[ -f "$dotfiles_dir"/links/"$1" ]]; then
+    # If link is going to be file, force symlink
+    ln -sf "$dotfiles_dir"/links/"$1" ~/"${files[$1]}"
   fi
+
+  # Try symlink if directory, but don't force it
+  ln -s "$dotfiles_dir"/links/"$1" ~/"${files[$1]}"
 }
 
 # handle the file by moving it to backup and symlinking
