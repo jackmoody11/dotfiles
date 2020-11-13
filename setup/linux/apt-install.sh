@@ -10,4 +10,4 @@ download_sudo_apt_things() {
 
 
 ########## Main ##########
-download_sudo_apt_things()
+download_sudo_apt_things
