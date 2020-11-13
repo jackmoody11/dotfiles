@@ -43,7 +43,7 @@ setup_os() {
   elif [ "$(uname -s)" == "Linux" ]; then
     display_message "Setting up Linux..."
     echo "First arg is $1"
-    if if [[ $* == *--testing* ]]; then
+    if [[ $* == *--testing* ]]; then
       bash "$setup_dir/linux/apt-install.sh"
     fi
     display_message "...done with Linux"
