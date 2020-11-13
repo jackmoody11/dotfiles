@@ -3,7 +3,7 @@
 # turn on "strict mode"
 set -euo pipefail
 
-dotfiles_dir="$(pwd)"
+dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 setup_dir="${dotfiles_dir}/setup"
 utils="${setup_dir}/utils.sh"
 backup="${dotfiles_dir}_old"
