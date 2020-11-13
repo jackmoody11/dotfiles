@@ -33,6 +33,11 @@ blink="\[\033[5 q\]"
 # Clear attributes
 clear_attributes="\[$(tput sgr0)\]"
 
+# Show git branch on command line
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /';
+}
+
 # Custom bash prompt - "➜  ~ (master) "
 export PS1="${titlebar}${green}➜  ${magenta}\W ${cyan}\$(git_branch)${clear_attributes}${blink}"
 
