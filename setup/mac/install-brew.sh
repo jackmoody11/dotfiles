@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ##########################################
 # NOTE: This is only intended for Mac OS #
@@ -11,7 +11,7 @@ setup_dir="$( dirname "$dir" )"
 dotfiles_dir="$( dirname "$setup_dir")"
 BREWFILE="$dotfiles_dir/Brewfile"
 
-source "$setup_dir/support"
+source "$setup_dir/utils.sh"
 
 bundle() {
   brew tap Homebrew/bundle
@@ -42,5 +42,5 @@ bundle
 BREW_PREFIX=$(brew --prefix)
 
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
+ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/basha256sum"
 

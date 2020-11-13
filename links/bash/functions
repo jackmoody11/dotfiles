@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ###################################################
 #################### Functions ####################
@@ -74,7 +74,7 @@ manpdf() {
 
 # Easily open website in google from command line
 google() {
-    if open -Ra "Google Chrome" ; 
+    if open -Ra "Google Chrome" ;
     then
         if [[ $1 == https://* ]] || [[ $1 == http://* ]] ;
         then

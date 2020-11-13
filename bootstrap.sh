@@ -1,32 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 # turn on "strict mode"
 set -euo pipefail
 
 dotfiles_dir="$(pwd)"
 setup_dir="${dotfiles_dir}/setup"
-support="${setup_dir}/support"
+utils="${setup_dir}/utils.sh"
 backup="${dotfiles_dir}_old"
 
-source "$support"
-
-confirm_bootstrap() {
-  display_message "Are you sure you want to continue bootstrapping dotfiles?"
-  read -n 1 -p "[y/n]> " install && echo
-  input_matches_yY "$install"
-}
-
-confirm_brew() {
-  display_message "Do you need to install homebrew and brewfiles?"
-  read -n 1 -p "[y/n]> " install && echo
-  input_matches_yY "$install"
-}
-
-confirm_jupyter() {
-  display_message "Do you need to add jupyter extensions?"
-  read -n 1 -p "[y/n]> " install && echo
-  input_matches_yY "$install"
-}
+source "$utils"
 
 symlink_dotfiles() {
   display_message "Symlinking dotfiles..."
@@ -36,7 +18,7 @@ symlink_dotfiles() {
 
 install_plugins() {
   display_message "Installing vim plugins..."
-  vim +PlugInstall +qall
+  vim +'PlugInstall --sync' +qa
   display_message "...done with plugins"
 }
 
@@ -52,23 +34,58 @@ setup_jupyter(){
   display_message "...done with Jupyter"
 }
 
-setup_mac() {
-  # Only set mac defaults if on a mac computer
+setup_os() {
   if [ "$(uname -s)" == "Darwin" ]; then
-    install_brew
-    display_message "Setting mac preferences"
+    display_message "Setting up MacOS"
     bash "$setup_dir/mac/macos"
-    display_message "...done with preferences"
+    display_message "...done with MacOS"
     display_message "You may need to restart your machine for all changes to take place."
+  elif [ "$(uname -s)" == "Linux" ]; then
+    display_message "Setting up Linux..."
+    if [[ $* == *--testing* ]]; then
+      echo "Skipping apt install in testing environment"
+    else
+      bash "$setup_dir/linux/apt-install.sh"
+    fi
+    display_message "...done with Linux"
   fi
 }
 
 bootstrap() {
   display_message "Bootstrapping dotfiles..."
   symlink_dotfiles
-  install_plugins
-  setup_mac
-  setup_jupyter
+  testing=false
+  for i in "$@"
+  do
+  case $i in
+      -v=*|--vim-plugins=*)
+      install_plugins
+      shift # past argument=value
+      ;;
+      -j=*|--jupyter=*)
+      setup_jupyter
+      shift
+      ;;
+      -t=*|--testing=*)
+      testing=true
+      shift
+      ;;
+      -b=*|--brew=*)
+      if [ "$(uname -s)" == "Darwin" ]; then
+        install_brew
+      fi
+      shift
+      ;;
+      *)
+            # unknown option
+      ;;
+  esac
+  done
+  if [ testing ]; then
+    setup_os --testing
+  else
+    setup_os
+  fi
   display_message "...done bootstrapping"
 }
 
