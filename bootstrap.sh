@@ -42,7 +42,9 @@ setup_os() {
     display_message "You may need to restart your machine for all changes to take place."
   elif [ "$(uname -s)" == "Linux" ]; then
     display_message "Setting up Linux..."
-    bash "$setup_dir/linux/apt-install.sh"
+    if [ "$2" == "--testing" ]; then
+      bash "$setup_dir/linux/apt-install.sh"
+    fi
     display_message "...done with Linux"
   fi
 }
@@ -50,6 +52,7 @@ setup_os() {
 bootstrap() {
   display_message "Bootstrapping dotfiles..."
   symlink_dotfiles
+  testing=false
   for i in "$@"
   do
   case $i in
@@ -59,6 +62,10 @@ bootstrap() {
       ;;
       -j=*|--jupyter=*)
       setup_jupyter
+      shift
+      ;;
+      -t=*|--testing=*)
+      testing=true
       shift
       ;;
       -b=*|--brew=*)
@@ -72,7 +79,11 @@ bootstrap() {
       ;;
   esac
   done
-  setup_os
+  if [ testing ]; then
+    setup_os --testing
+  else
+    setup_os
+  fi
   display_message "...done bootstrapping"
 }
 

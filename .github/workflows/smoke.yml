@@ -12,7 +12,7 @@ jobs:
         run: chmod +x ./bootstrap.sh
       - name: Run bootstrap.sh
         run: |
-          ./bootstrap.sh
+          ./bootstrap.sh --testing
   build-ubuntu-latest:
     runs-on: ubuntu-latest
     steps:
@@ -21,4 +21,4 @@ jobs:
         run: chmod +x ./bootstrap.sh
       - name: Run bootstrap.sh
         run: |
-          sudo ./bootstrap.sh
+          sudo ./bootstrap.sh --testing
