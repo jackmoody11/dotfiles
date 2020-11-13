@@ -1,5 +1,6 @@
 #!/bin/bash
-theme="~/dotfiles/setup/mac/Dracula.terminal"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+theme="${DIR}/Dracula.terminal"
 filename=$(basename -- "$theme")
 extension="${filename##*.}"
 theme_name="${filename%.*}"

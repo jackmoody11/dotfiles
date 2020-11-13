@@ -11,3 +11,6 @@
 custom/
 nbconfig/
 migrated
+
+# VS Code
+.vscode/
