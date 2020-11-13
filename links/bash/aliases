@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # https://stackoverflow.com/questions/4642822/commands-executed-from-vim-are-not-recognizing-bash-command-aliases
 shopt -s expand_aliases
@@ -48,8 +48,10 @@ alias .5='cd ../../../../..'
 alias cpu="top -F -R -o cpu"
 
 # Open applications
-alias chrome="open -a 'Google Chrome'"
-alias spotify="open -a Spotify"
+if [ "$(uname)" == "Darwin"]; then
+  alias chrome="open -a 'Google Chrome'"
+  alias spotify="open -a Spotify"
+fi
 
 # LaTeX Cleanup
 alias cleantex="find . \( -name '*.log' -or -name '*.synctex.gz' -or -name '*.fdb_latexmk' -or -name '*.fls' -or -name '*.aux' \) -delete"

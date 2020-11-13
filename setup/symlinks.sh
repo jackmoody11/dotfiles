@@ -1,10 +1,11 @@
-#!/bin/sh
-setup_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-dotfiles_dir="$(dirname "$setup_dir")"
-support="$setup_dir/support"
+#!/bin/bash
+current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+dotfiles_dir="$(dirname "$current_dir")"
+utils="$current_dir/utils.sh"
 backup="${dotfiles_dir}_old"
 
-source $support
+source $utils
+
 # Set symlinks for files and folders
 declare -A files=(
   [bash]=.bash
@@ -69,7 +70,6 @@ handle_file() {
 handle_files() {
   for file in "${!files[@]}"; do
     handle_file "$file"
-    sleep 1
   done
 }
 

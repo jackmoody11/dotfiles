@@ -1,0 +1,6 @@
+neofetch
+python3.9
+gnome
+tweak-tool
+dconf-cli
+
