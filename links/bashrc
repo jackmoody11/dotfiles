@@ -1,5 +1,7 @@
-# Add `code` keyword to Terminal
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+if [ $(uname) == "Darwin" ]; then
+  # Add `code` keyword to Terminal
+  export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+fi
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -44,3 +46,7 @@ shopt -s autocd
 
 # added by travis gem
 [ -f /Users/jacklm/.travis/travis.sh ] && source /Users/jacklm/.travis/travis.sh
+
+# Add starship
+export STARSHIP_CONFIG=~/.starship.toml
+eval "$(starship init bash)"

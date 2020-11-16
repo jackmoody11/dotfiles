@@ -48,7 +48,7 @@ alias .5='cd ../../../../..'
 alias cpu="top -F -R -o cpu"
 
 # Open applications
-if [ "$(uname)" == "Darwin"]; then
+if [ "$(uname)" == "Darwin" ]; then
   alias chrome="open -a 'Google Chrome'"
   alias spotify="open -a Spotify"
 fi

@@ -51,6 +51,7 @@ brew "sphinx-doc" # Enable Sphinx documentation for Python projects
 brew "sqlite" # Add SQLite
 brew "redis" # Add redis
 brew "ruby" # Add Ruby
+brew "starship"
 brew "vim" # Add VIM
 brew "wget" # Add wget
 brew "zsh" # Add ZSH shell
@@ -100,7 +101,6 @@ cask "mactex-no-gui"
 
 cask "visual-studio-code" # Install VS Code
 cask "whatsapp" # Install Whatsapp
-brew "mas" # Make installing apps from the App Store easier
-# https://github.com/mas-cli/mas
+brew "mas" # Make installing apps from the App Store easier https://github.com/mas-cli/mas
 cask "alfred"
 cask "hyper" # Install Hyper

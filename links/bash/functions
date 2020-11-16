@@ -34,6 +34,7 @@ git_branch() {
 
 # Easily google Github repositories from command line
 github() {
+  if [[ "$(uname)" == "Darwin" ]]; then
     if [[ $# -eq 0 ]] ;
     then
         open 'https://github.com'
@@ -46,6 +47,7 @@ github() {
     else
         echo "Invalid option. Valid options include <user>/<repo>, 'me', and ''"
     fi
+  fi
 }
 
 ############### General ################
@@ -69,7 +71,9 @@ mkd() {
 }
 
 manpdf() {
+  if [[ "$(uname)" == "Darwin" ]]; then
     man -t $1 | open -f -a /Applications/Preview.app
+  fi
 }
 
 # Easily open website in google from command line

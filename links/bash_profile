@@ -1,7 +1,6 @@
 source ~/.profile
 source ~/dotfiles/links/bash/aliases
 source ~/dotfiles/links/bash/functions
-source ~/dotfiles/links/bash/inputrc
+source ~/dotfiles/links/inputrc
 # Must import functions before bashrc
 source ~/dotfiles/links/bashrc
-
