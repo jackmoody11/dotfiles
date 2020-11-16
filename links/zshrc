@@ -1,0 +1,15 @@
+# Get rid of "%" showing up at top of Hyper
+unsetopt PROMPT_SP
+
+source ~/dotfiles/links/bash/aliases
+source ~/dotfiles/links/bash/functions
+
+plugins=(
+zsh-autosuggestions
+)
+
+# Zsh to use the same colors as ls
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# Must be at end of zshrc
+eval "$(starship init zsh)"

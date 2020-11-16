@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+    fontFamily: '"FiraCode Nerd Font", "SF Mono", Menlo, Monaco, "Courier New", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -44,7 +44,7 @@ module.exports = {
     // terminal background color
     // opacity is only supported on macOS
     backgroundColor: '#000',
-    
+
     accentColor: '#64FFDA',
     // terminal selection color
     selectionColor: 'rgba(248,28,229,0.3)',
@@ -53,7 +53,7 @@ module.exports = {
     borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: `.tabs_title{ font-family: 'SF Mono' }`,
+    css: `.tabs_title{ font-family: 'FiraCode Nerd Font' }`,
 
     // custom CSS to embed in the terminal window
     termCSS: '',
@@ -126,7 +126,7 @@ module.exports = {
 
     // Whether to use the WebGL renderer. Set it to false to use canvas-based
     // rendering (slower, but supports transparent backgrounds)
-    webGLRenderer: true,
+    webGLRenderer: false,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
@@ -138,9 +138,8 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [// 'hyper-transparent'
-               'hyper-dracula', 
-	       // 'hyperline#0.6.1'
-           ],
+  // 'hyperline#0.6.1'
+  'hyper-dracula', "hyper-font-ligatures", "hyperline"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

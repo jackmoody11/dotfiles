@@ -16,6 +16,7 @@ declare -A files=(
   [tmux.conf]=.tmux.conf
   [vim]=.vim
   [hyper.js]=.hyper.js
+  [starship.toml]=.starship.toml
 )
 
 create_backup_dir() {
