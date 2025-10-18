@@ -48,5 +48,9 @@ shopt -s autocd
 [ -f /Users/jacklm/.travis/travis.sh ] && source /Users/jacklm/.travis/travis.sh
 
 # Add starship
-export STARSHIP_CONFIG=~/.starship.toml
-eval "$(starship init bash)"
+if command -v starship >/dev/null 2>&1; then
+  export STARSHIP_CONFIG=~/.starship.toml
+  eval "$(starship init bash)"
+else
+  echo "Starship not installed. Skipping setup of starship."
+fi
