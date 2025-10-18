@@ -1,4 +1,4 @@
-#!/bin/bash
+g!/bin/bash
 
 # https://stackoverflow.com/questions/4642822/commands-executed-from-vim-are-not-recognizing-bash-command-aliases
 shopt -s expand_aliases
@@ -13,6 +13,7 @@ alias tree="tree -C" # Colorize tree
 alias reload='. ~/.bashrc >/dev/null && echo "reloaded"'
 
 # -F displays `/`for directories, `*` for executables, etc...
+alias cls='clear'
 alias ls='ls -F'
 alias ls.='ls -Fd .*' # Show dotfiles and hide others
 alias ll='ls -aoFh' # Show all files and directories with sizes
